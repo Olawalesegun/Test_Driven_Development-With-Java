@@ -10,9 +10,6 @@ public class ReadUserInput {
         // Enter the number #x: where x represents the count
         System.out.println(useSudoForRootCase(10));
     }
-
-
-
     public static boolean useSudoForRootCase(int baseForCondition) {
         Scanner userInput = new Scanner(System.in);
         int x;

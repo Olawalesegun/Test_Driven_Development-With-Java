@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="102157b4-e826-4e12-8ce5-778922ffdfdb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/Calculation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReadingInt.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaLingua.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaLingua.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/ReadUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/ReadUserInput.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,14 +68,7 @@
       <recent name="tdd" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Calculation">
-    <configuration name="Bike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Bike" />
-      <module name="javaLingua" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ReadUserInput">
     <configuration name="Calculation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Calculation" />
       <module name="javaLingua" />
@@ -85,8 +76,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ForLoop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ForLoop" />
+    <configuration name="DigitSum" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="DigitSum" />
+      <module name="javaLingua" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReadUserInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReadUserInput" />
       <module name="javaLingua" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -99,8 +97,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Switch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Switch" />
+    <configuration name="StringConversion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StringConversion" />
       <module name="javaLingua" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,11 +106,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReadUserInput" />
+        <item itemvalue="Application.StringConversion" />
+        <item itemvalue="Application.DigitSum" />
         <item itemvalue="Application.Calculation" />
         <item itemvalue="Application.ReadingInt" />
-        <item itemvalue="Application.Switch" />
-        <item itemvalue="Application.ForLoop" />
-        <item itemvalue="Application.Bike" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +137,8 @@
       <workItem from="1680271718717" duration="11186000" />
       <workItem from="1680604734663" duration="2732000" />
       <workItem from="1680623398024" duration="2876000" />
-      <workItem from="1680676481339" duration="2631000" />
+      <workItem from="1680676481339" duration="18468000" />
+      <workItem from="1680726102550" duration="891000" />
     </task>
     <servers />
   </component>
