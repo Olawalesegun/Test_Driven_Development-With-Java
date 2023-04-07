@@ -26,7 +26,6 @@ public class ReadUserInput {
                 System.out.println("Invalid Number");
                 break;
             }
-
         }
         return hasNextInt;
     }
