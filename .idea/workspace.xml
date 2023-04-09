@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="102157b4-e826-4e12-8ce5-778922ffdfdb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/App/AppEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Nok.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/App/Nokia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/AverageScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/MinMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/Scores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/Sum4and5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/Valid5Scores.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/ValidScores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/ReadUserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/GettingHandsDirtyDoingTheWork/ReadUserInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaLingua.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaLingua.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tdd/FizzBuzz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tdd/FizzBuzz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/AppEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/AppEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Nokia.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/Nokia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +145,8 @@
       <workItem from="1680604734663" duration="2732000" />
       <workItem from="1680623398024" duration="2876000" />
       <workItem from="1680676481339" duration="18468000" />
-      <workItem from="1680726102550" duration="41832000" />
+      <workItem from="1680726102550" duration="50154000" />
+      <workItem from="1681044390980" duration="16307000" />
     </task>
     <servers />
   </component>
