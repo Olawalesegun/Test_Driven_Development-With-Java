@@ -45,69 +45,160 @@ public class Nokia {
         int phoneBookEntry, optionsEntry;
         //boolean hasNext = inputFromUser.hasNextInt();
         if (numberEntered == 1) {
-            System.out.println("Phone book");
-            System.out.println("Kindly Enter a number in your Phone Book");
-            System.out.println("Press 1 for Search");
-            System.out.println("Press 2 for Service Nos");
-            System.out.println("Press 3 for Name");
-            System.out.println("Press 4 for Erase");
-            System.out.println("Press 5 for Edit");
-            System.out.println("Press 6 for Assign tone");
-            System.out.println("Press 7 for b'card");
+            System.out.println("""
+                            Phone book
+                            Kindly Enter a number in your Phone Book
+                            Press 1 for Search
+                            Press 2 for Service Nos
+                            Press 3 for Name
+                            Press 4 for Erase
+                            Press 5 for Edit
+                            Press 6 for Assign tone
+                            Press 7 for b'card
+                            """);
             Scanner inputFromUser = new Scanner(System.in);
             phoneBookEntry = inputFromUser.nextInt();
             switch (phoneBookEntry) {
-                case 1 -> System.out.println("Search");
-                case 2 -> System.out.println("Service Nos");
-                case 3 -> System.out.println("Add Name");
-                case 4 -> System.out.println("Erase");
-                case 5 -> System.out.println("Edit");
-                case 6 -> System.out.println("Assign tone");
-                case 7 -> System.out.println("Send b'card");
+                case 1 -> {
+                    System.out.println("Search");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 2 -> {
+                    System.out.println("Service Nos");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 3 -> {
+                    System.out.println("Add Name");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 4 -> {
+                    System.out.println("Erase");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 5 -> {
+                    System.out.println("Edit");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 6 -> {
+                    System.out.println("Assign tone");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 7 -> {
+                    System.out.println("Send b'card");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
                 case 8 -> {
                     System.out.println("Options");
                     System.out.println("Kindly Enter a number in your Options Book");
                     System.out.println("Press 1 for Type Of View");
                     System.out.println("Press 2 for Memory status");
-                    //RETURNS
-                    System.out.println("To return to the previous option Press 3");
-                    System.out.println("To go back to the Main Menu, Press 4");
+                    //Scanner inputFromUser = new Scanner(System.in);
                     optionsEntry = inputFromUser.nextInt();
                     switch (optionsEntry) {
-                        case 1 -> System.out.println("Type Of View");
-                        case 2 -> System.out.println("Memory status");
-                        case 3 -> {
-                            System.out.println("Phone book");
-                            System.out.println("Kindly Enter a number in your Phone Book");
-                            System.out.println("Press 1 for Search");
-                            System.out.println("Press 2 for Service Nos");
-                            System.out.println("Press 3 for Name");
-                            System.out.println("Press 4 for Erase");
-                            System.out.println("Press 5 for Edit");
-                            System.out.println("Press 6 for Assign tone");
-                            System.out.println("Press 7 for b'card");
-                            phoneBookEntry = inputFromUser.nextInt();
-                            switch (phoneBookEntry) {
-                                case 1 -> System.out.println("Search");
-                                case 2 -> System.out.println("Service Nos");
-                                case 3 -> System.out.println("Add Name");
-                                case 4 -> System.out.println("Erase");
-                                case 5 -> System.out.println("Edit");
-                                case 6 -> System.out.println("Assign tone");
-                                case 7 -> System.out.println("Send b'card");
-                                case 8 -> {
-                                    System.out.println("Options");
-                                    System.out.println("Kindly Enter a number in your Options Book");
-                                    System.out.println("Press 1 for Type Of View");
-                                    System.out.println("Press 2 for Memory status");
-                                }
-                            }
+                        case 1 -> {
+                            System.out.println("Type Of View");
+                            System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.phoneBookMenu();
+                            if(returnBack == 0) nokiaMainMenu();
                         }
-                        //END OF RETURN
+                        case 2 -> {
+                            System.out.println("Memory status");
+                            System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.phoneBookMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
-                case 9 -> System.out.println("Speed Dials");
-                case 10 -> System.out.println("Voice tags");
+                case 9 -> {
+                    System.out.println("Speed Dials");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 10 -> {
+                    System.out.println("Voice tags");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.phoneBookMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
             }
         }
     }
@@ -128,12 +219,77 @@ public class Nokia {
             System.out.println("Press 7 for Message Settings");
             messageEntry = inputFromUser.nextInt();
             switch (messageEntry) {
-                case 1 -> System.out.println("Write Messages");
-                case 2 -> System.out.println("Inbox");
-                case 3 -> System.out.println("Outbox");
-                case 4 -> System.out.println("Picture messages");
-                case 5 -> System.out.println("Templates");
-                case 6 -> System.out.println("Smileys");
+                case 1 -> {
+                    System.out.println("Write Messages");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 2 -> {
+                    System.out.println("Inbox");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 3 -> {
+                    System.out.println("Outbox");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 4 -> {
+                    System.out.println("Picture messages");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 5 -> {
+                    System.out.println("Templates");
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 6 -> {
+                    System.out.println("Smileys");
+
+                    System.out.println("""
+                                Press 1 to go back to the previous Menu
+                                Press 0 to go back to the Main Menu
+                                Press CTRL+D to exit
+                                """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
                 case 7 -> {
                     System.out.println("Message Settings");
                     System.out.println("Kindly Enter a number in your Message settings");
@@ -149,9 +305,42 @@ public class Nokia {
                             System.out.println("Press 3 for Message validity");
                             setMessageEntry = inputFromUser.nextInt();
                             switch (setMessageEntry) {
-                                case 1 -> System.out.println("Message centre Number");
-                                case 2 -> System.out.println("Messages sent as");
-                                case 3 -> System.out.println("Message validity");
+                                case 1 -> {
+                                    System.out.println("Message centre Number");
+
+                                    System.out.println("""
+                                            Press 1 to go back to the previous Menu
+                                            Press 0 to go back to the Main Menu
+                                            Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
+                                case 2 -> {
+                                    System.out.println("Messages sent as");
+
+                                    System.out.println("""
+                                                Press 1 to go back to the previous Menu
+                                                Press 0 to go back to the Main Menu
+                                                Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
+                                case 3 -> {
+                                    System.out.println("Message validity");
+
+                                    System.out.println("""
+                                                Press 1 to go back to the previous Menu
+                                                Press 0 to go back to the Main Menu
+                                                Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
                             }
                         }
                         case 2 -> {
@@ -162,16 +351,81 @@ public class Nokia {
                             System.out.println("Press 3 for Character support");
                             commonMessageSettingsEntry = inputFromUser.nextInt();
                             switch (commonMessageSettingsEntry) {
-                                case 1 -> System.out.println("Delivery reports");
-                                case 2 -> System.out.println("Reply via same centre");
-                                case 3 -> System.out.println("Character support");
+                                case 1 -> {
+                                    System.out.println("Delivery reports");
+
+                                    System.out.println("""
+                                                Press 1 to go back to the previous Menu
+                                                Press 0 to go back to the Main Menu
+                                                Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
+                                case 2 -> {
+                                    System.out.println("Reply via same centre");
+
+                                    System.out.println("""
+                                                Press 1 to go back to the previous Menu
+                                                Press 0 to go back to the Main Menu
+                                                Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
+                                case 3 -> {
+                                    System.out.println("Character support");
+
+                                    System.out.println("""
+                                                Press 1 to go back to the previous Menu
+                                                Press 0 to go back to the Main Menu
+                                                Press CTRL+D to exit
+                                            """);
+                                    returnBack = inputFromUser.nextInt();
+                                    if(returnBack == 1) Nokia.messagesMenu();
+                                    if(returnBack == 0) nokiaMainMenu();
+                                }
                             }
                         }
                     }
                 }
-                case 8 -> System.out.println("Info service");
-                case 9 -> System.out.println("Voice mailbox number");
-                case 10 -> System.out.println("Service command editor");
+                case 8 -> {
+                    System.out.println("Info service");
+
+                    System.out.println("""
+                                    Press 1 to go back to the previous Menu
+                                    Press 0 to go back to the Main Menu
+                                    Press CTRL+D to exit
+                                    """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 9 -> {
+                    System.out.println("Voice mailbox number");
+
+                    System.out.println("""
+                                    Press 1 to go back to the previous Menu
+                                    Press 0 to go back to the Main Menu
+                                    Press CTRL+D to exit
+                                    """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 10 -> {
+                    System.out.println("Service command editor");
+                    System.out.println("""
+                                    Press 1 to go back to the previous Menu
+                                    Press 0 to go back to the Main Menu
+                                    Press CTRL+D to exit
+                                    """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.messagesMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
             }
         }
     }
@@ -182,9 +436,11 @@ public class Nokia {
         if (numberEntered == 3) {
             System.out.println("Chat");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit
+                    """);
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.messagesMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -219,10 +475,42 @@ public class Nokia {
                     System.out.println("Press 4 for Clear timers");
                     callDurationEntry = inputFromUser.nextInt();
                     switch (callDurationEntry) {
-                        case 1 -> System.out.println("Last call duration");
-                        case 2 -> System.out.println("All calls duration");
-                        case 3 -> System.out.println("Received calls duration");
-                        case 4 -> System.out.println("Clear timers");
+                        case 1 -> {
+                            System.out.println("Last call duration");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 2 -> {
+                            System.out.println("All calls duration");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 3 -> {
+                            System.out.println("Received calls duration");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 4 -> {
+                            System.out.println("Clear timers");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
                 case 6 -> {
@@ -233,9 +521,33 @@ public class Nokia {
                     System.out.println("Press 3 for Clear counters");
                     showCallEntry = inputFromUser.nextInt();
                     switch (showCallEntry) {
-                        case 1 -> System.out.println("Last call cost");
-                        case 2 -> System.out.println("All calls cost");
-                        case 3 -> System.out.println("Clear counters");
+                        case 1 -> {
+                            System.out.println("Last call cost");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 2 -> {
+                            System.out.println("All calls cost");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 3 -> {
+                            System.out.println("Clear counters");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
                 case 7 -> {
@@ -245,11 +557,35 @@ public class Nokia {
                     System.out.println("Press 2 for Show costs in");
                     callCostEntry = inputFromUser.nextInt();
                     switch (callCostEntry) {
-                        case 1 -> System.out.println("Call cost limit");
-                        case 2 -> System.out.println("Show costs in");
+                        case 1 -> {
+                            System.out.println("Call cost limit");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 2 -> {
+                            System.out.println("Show costs in");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.callRegistryMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
-                case 8 -> System.out.println("Prepaid credit");
+                case 8 -> {
+                    System.out.println("Prepaid credit");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.callRegistryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
             }
         }
     }
@@ -271,15 +607,87 @@ public class Nokia {
             System.out.println("Press 9 for Screen saver");
             tonesEntry = inputFromUser.nextInt();
             switch (tonesEntry) {
-                case 1 -> System.out.println("Ringing tone");
-                case 2 -> System.out.println("Ringing volume");
-                case 3 -> System.out.println("Incoming call alert");
-                case 4 -> System.out.println("Composer");
-                case 5 -> System.out.println("Message Alert tone");
-                case 6 -> System.out.println("Keypad tones");
-                case 7 -> System.out.println("Warming and game tones");
-                case 8 -> System.out.println("Vibrating alert");
-                case 9 -> System.out.println("Screen saver");
+                case 1 -> {
+                    System.out.println("Ringing tone");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 2 -> {
+                    System.out.println("Ringing volume");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 3 -> {
+                    System.out.println("Incoming call alert");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 4 -> {
+                    System.out.println("Composer");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 5 -> {
+                    System.out.println("Message Alert tone");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 6 -> {
+                    System.out.println("Keypad tones");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 7 -> {
+                    System.out.println("Warming and game tones");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 8 -> {
+                    System.out.println("Vibrating alert");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 9 -> {
+                    System.out.println("Screen saver");
+
+                    System.out.println("To return to the previous options, Press 1\n" +
+                            "To go back to Main Menu, press 0");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.tonesEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
             }
         }
     }
@@ -308,12 +716,60 @@ public class Nokia {
                     System.out.println("Press 6 for Automatic answer");
                     callSettingsEntry = inputFromUser.nextInt();
                     switch (callSettingsEntry) {
-                        case 1 -> System.out.println("Automatic redial");
-                        case 2 -> System.out.println("Speed dialling");
-                        case 3 -> System.out.println("Call waiting options");
-                        case 4 -> System.out.println("Own number sending");
-                        case 5 -> System.out.println("Phone line in use");
-                        case 6 -> System.out.println("Automatic answer");
+                        case 1 -> {
+                            System.out.println("Automatic redial");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 2 -> {
+                            System.out.println("Speed dialling");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 3 -> {
+                            System.out.println("Call waiting options");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 4 -> {
+                            System.out.println("Own number sending");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 5 -> {
+                            System.out.println("Phone line in use");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 6 -> {
+                            System.out.println("Automatic answer");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
                 case 2 -> {
@@ -327,12 +783,59 @@ public class Nokia {
                     System.out.println("Press 6 to Confirm SIM service actions");
                     phoneSettingsEntry = inputFromUser.nextInt();
                     switch (phoneSettingsEntry) {
-                        case 1 -> System.out.println("Language");
-                        case 2 -> System.out.println("Cell info display");
-                        case 3 -> System.out.println("Welcome note");
-                        case 4 -> System.out.println("Network selection");
-                        case 5 -> System.out.println("Lights");
-                        case 6 -> System.out.println("Confirm SIM service actions");
+                        case 1 -> {
+                            System.out.println("Language");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 2 -> {
+                            System.out.println("Cell info display");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 3 -> {
+                            System.out.println("Welcome note");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 4 -> {
+                            System.out.println("Network selection");
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 5 -> {
+                            System.out.println("Lights");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
+                        case 6 -> {
+                            System.out.println("Confirm SIM service actions");
+
+                            System.out.println("To return to the previous options, Press 1\n" +
+                                    "To go back to Main Menu, press 0");
+                            returnBack = inputFromUser.nextInt();
+                            if(returnBack == 1) Nokia.settingsMenu();
+                            if(returnBack == 0) nokiaMainMenu();
+                        }
                     }
                 }
                 case 3 -> {
@@ -348,7 +851,7 @@ public class Nokia {
                     switch (secSettingsEntry) {
                         case 1 -> {
                             System.out.println("PIN code request");
-                            System.out.println("To return to the previous options, Press 1" +
+                            System.out.println("To return to the previous options, Press 1\n" +
                                     "To go back to Main Menu, press 0");
                             returnBack = inputFromUser.nextInt();
                             if(returnBack == 1) Nokia.settingsMenu();
@@ -388,29 +891,28 @@ public class Nokia {
                         }
                         case 6 -> {
                             System.out.println("Change access codes");
-                            System.out.println("To return to the previous options, Press 1\n" +
-                                    "To go back to Main Menu, press 0");
+                            System.out.println("""
+                                    To return to the previous options, Press 1
+                                    To go back to Main Menu, press 0
+                                    """);
                             returnBack = inputFromUser.nextInt();
                             if(returnBack == 1) Nokia.settingsMenu();
                             if(returnBack == 0) nokiaMainMenu();
                         }
                     }
-                    /*System.out.println("Press 1 to go back to the previous Menu\n" +
-                            "Press 0 to go back to the Main Menu\n" +
-                            "To Repeat this Menu again" +
-                            "Press CTRL+D to exit");
-                    returnBack = inputFromUser.nextInt();
-                    if(returnBack == 1) Nokia.settingsMenu();
-                    if(returnBack == 0) nokiaMainMenu();*/
+
                 }
                 case 4 -> {
                     System.out.println("Restore factory settings");
-                    System.out.println("To repeat this option, Press 1\n" +
-                            "To go back to Main Menu, press 0");
+                    System.out.println("""
+                            To repeat this option, Press 1
+                            To go back to Main Menu, press 0
+                            """);
                     returnBack = inputFromUser.nextInt();
                     if(returnBack == 1) Nokia.settingsMenu();
                     if(returnBack == 0) nokiaMainMenu();
                 }
+                default -> throw new IllegalStateException("Unexpected value: " + settingsEntry);
             }
         }
     }
@@ -420,9 +922,10 @@ public class Nokia {
         if (numberEntered == 7) {
             System.out.println("Call divert");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit""");
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.settingsMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -435,9 +938,10 @@ public class Nokia {
             System.out.println("Games");
 
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit""");
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.callDivertMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -449,9 +953,10 @@ public class Nokia {
         if (numberEntered == 9) {
             System.out.println("Calculator");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit""");
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.gamesMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -464,9 +969,10 @@ public class Nokia {
         if (numberEntered == 10) {
             System.out.println("Reminders");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit""");
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.calculatorMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -490,18 +996,73 @@ public class Nokia {
                 case 1 -> {
                     System.out.println("Alarm clock");
 
-                    System.out.println("Press 1 to go back to the previous option\n" +
-                            "Press 0 to go back to the Main Menu\n" +
-                            "Press CTRL+D to exit");
+                    System.out.println("""
+                            Press 1 to go back to the previous option
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit""");
                     returnBack = inputFromUser.nextInt();
                     if(returnBack == 1) Nokia.clockEntryMenu();
                     if(returnBack == 0) nokiaMainMenu();
                 }
-                case 2 -> System.out.println("Clock settings");
-                case 3 -> System.out.println("Date settings");
-                case 4 -> System.out.println("Stopwatch");
-                case 5 -> System.out.println("Countdown timer");
-                case 6 -> System.out.println("Auto update of date and time");
+                case 2 -> {
+                    System.out.println("Clock settings");
+
+                    System.out.println("""
+                            Press 1 to go back to the previous option
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit""");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.clockEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 3 -> {
+                    System.out.println("Date settings");
+
+                    System.out.println("""
+                            Press 1 to go back to the previous option
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit""");
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.clockEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 4 -> {
+                    System.out.println("Stopwatch");
+
+                    System.out.println("""
+                            Press 1 to go back to the previous option
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit
+                            """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.clockEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 5 -> {
+                    System.out.println("Countdown timer");
+
+                    System.out.println("""
+                                    Press 1 to go back to the previous option
+                                    Press 0 to go back to the Main Menu
+                                    Press CTRL+D to exit
+                                    """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.clockEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                case 6 -> {
+                    System.out.println("Auto update of date and time");
+
+                    System.out.println("""
+                            Press 1 to go back to the previous option
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit
+                            """);
+                    returnBack = inputFromUser.nextInt();
+                    if(returnBack == 1) Nokia.clockEntryMenu();
+                    if(returnBack == 0) nokiaMainMenu();
+                }
+                default -> throw new IllegalStateException("Unexpected value: " + clockEntry);
             }
 
         }
@@ -512,9 +1073,11 @@ public class Nokia {
         if (numberEntered == 12) {
             System.out.println("Profiles");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit
+                    """);
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.clockEntryMenu();
             if(returnBack == 0) nokiaMainMenu();
@@ -527,17 +1090,54 @@ public class Nokia {
         if (numberEntered == 13) {
             System.out.println("SIM services");
 
-            System.out.println("Press 1 to go back to the previous Menu\n" +
-                    "Press 0 to go back to the Main Menu\n" +
-                    "Press CTRL+D to exit");
+            System.out.println("""
+                    Press 1 to go back to the previous Menu
+                    Press 0 to go back to the Main Menu
+                    Press CTRL+D to exit
+                    """);
             returnBack = inputFromUser.nextInt();
             if(returnBack == 1) Nokia.profileMenu();
             if(returnBack == 0) nokiaMainMenu();
-
-
         }
     }
 }
 
             //System.out.println("To quit this enter exit");
              //       hasNext = inputFromUser.hasNextBoolean();
+
+
+                                    //RETURNS
+                 /*   System.out.println("To return to the previous option Press 3");
+                            System.out.println("To go back to the Main Menu, Press 4");
+                            optionsEntry = inputFromUser.nextInt();
+                            switch (optionsEntry) {
+                            case 1 -> System.out.println("Type Of View");
+                            case 2 -> System.out.println("Memory status");
+                            case 3 -> {
+                            System.out.println("Phone book");
+                            System.out.println("Kindly Enter a number in your Phone Book");
+                            System.out.println("Press 1 for Search");
+                            System.out.println("Press 2 for Service Nos");
+                            System.out.println("Press 3 for Name");
+                            System.out.println("Press 4 for Erase");
+                            System.out.println("Press 5 for Edit");
+                            System.out.println("Press 6 for Assign tone");
+                            System.out.println("Press 7 for b'card");
+                            phoneBookEntry = inputFromUser.nextInt();
+                            switch (phoneBookEntry) {
+                            case 1 -> System.out.println("Search");
+                            case 2 -> System.out.println("Service Nos");
+                            case 3 -> System.out.println("Add Name");
+                            case 4 -> System.out.println("Erase");
+                            case 5 -> System.out.println("Edit");
+                            case 6 -> System.out.println("Assign tone");
+                            case 7 -> System.out.println("Send b'card");
+                            case 8 -> {
+                            System.out.println("Options");
+                            System.out.println("Kindly Enter a number in your Options Book");
+                            System.out.println("Press 1 for Type Of View");
+                            System.out.println("Press 2 for Memory status");
+                            }
+                            }
+                            }*/
+//END OF RETURN
