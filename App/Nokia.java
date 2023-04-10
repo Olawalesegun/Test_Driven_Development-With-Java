@@ -9,21 +9,23 @@ public class Nokia {
     }
 
     public static void nokiaMainMenu(){
-        System.out.println("Welcome to Nokia Mobile Phone");
-        System.out.println("Kindly Enter a number in your Nokia Mobile Phone");
-        System.out.println("Press 1 for Phone book");
-        System.out.println("Press 2 for Messages");
-        System.out.println("Press 3 for Chat");
-        System.out.println("Press 4 for Call register");
-        System.out.println("Press 5 for Tones");
-        System.out.println("Press 6 for Settings");
-        System.out.println("Press 7 for Call divert");
-        System.out.println("Press 8 for Games");
-        System.out.println("Press 9 for Calculator");
-        System.out.println("Press 10 for Reminders");
-        System.out.println("Press 11 for Clock");
-        System.out.println("Press 12 for Profiles");
-        System.out.println("Press 13 for SIM services");
+        System.out.println("""
+                Welcome to Nokia Mobile Phone
+                Kindly Enter a number in your Nokia Mobile Phone
+                Press 1 for Phone book
+                Press 2 for Messages
+                Press 3 for Chat
+                Press 4 for Call register
+                Press 5 for Tones
+                Press 6 for Settings
+                Press 7 for Call divert
+                Press 8 for Games
+                Press 9 for Calculator
+                Press 10 for Reminders
+                Press 11 for Clock
+                Press 12 for Profiles
+                Press 13 for SIM services
+                """);
         Scanner inputFromUser = new Scanner(System.in);
         numberEntered = inputFromUser.nextInt();
         phoneBookMenu();
