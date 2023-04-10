@@ -210,15 +210,17 @@ public class Nokia {
         int messageSettingEntry, setMessageEntry, commonMessageSettingsEntry;
         Scanner inputFromUser = new Scanner(System.in);
         if (numberEntered == 2) {
-            System.out.println("Message");
-            System.out.println("Kindly Enter a number in your Message Box");
-            System.out.println("Press 1 to Write Message");
-            System.out.println("Press 2 to check your Inbox");
-            System.out.println("Press 3 to check your Outbox");
-            System.out.println("Press 4 to check your Picture messages");
-            System.out.println("Press 5 for Templates");
-            System.out.println("Press 6 for Smileys");
-            System.out.println("Press 7 for Message Settings");
+            System.out.println("""
+                    Message
+                    Kindly Enter a number in your Message Box
+                    Press 1 to Write Message
+                    Press 2 to check your Inbox
+                    Press 3 to check your Outbox
+                    Press 4 to check your Picture messages
+                    Press 5 for Templates
+                    Press 6 for Smileys
+                    Press 7 for Message Settings
+                    """);
             messageEntry = inputFromUser.nextInt();
             switch (messageEntry) {
                 case 1 -> {
@@ -300,11 +302,13 @@ public class Nokia {
                     messageSettingEntry = inputFromUser.nextInt();
                     switch (messageSettingEntry) {
                         case 1 -> {
-                            System.out.println("Set 1^2");
-                            System.out.println("Kindly Enter a number to set your message settings");
-                            System.out.println("Press 1 for Message centre Number");
-                            System.out.println("Press 2 for Messages sent as");
-                            System.out.println("Press 3 for Message validity");
+                            System.out.println("""
+                                    Set 1^2" +
+                                    Kindly Enter a number to set your message settings\s
+                                    Press 1 for Message centre Number
+                                    Press 2 for Messages sent as
+                                    Press 3 for Message validity
+                                    """);
                             setMessageEntry = inputFromUser.nextInt();
                             switch (setMessageEntry) {
                                 case 1 -> {
@@ -323,9 +327,9 @@ public class Nokia {
                                     System.out.println("Messages sent as");
 
                                     System.out.println("""
-                                                Press 1 to go back to the previous Menu
-                                                Press 0 to go back to the Main Menu
-                                                Press CTRL+D to exit
+                                            Press 1 to go back to the previous Menu
+                                            Press 0 to go back to the Main Menu
+                                            Press CTRL+D to exit
                                             """);
                                     returnBack = inputFromUser.nextInt();
                                     if(returnBack == 1) Nokia.messagesMenu();
@@ -346,20 +350,22 @@ public class Nokia {
                             }
                         }
                         case 2 -> {
-                            System.out.println("Common^3");
-                            System.out.println("Kindly Enter a number For Common Settings");
-                            System.out.println("Press 1 for Delivery reports");
-                            System.out.println("Press 2 for Reply via same centre");
-                            System.out.println("Press 3 for Character support");
+                            System.out.println("""
+                                    Common^3
+                                    Kindly Enter a number For Common Settings
+                                    System.out.println("Press 1 for Delivery reports
+                                    System.out.println("Press 2 for Reply via same centre
+                                    System.out.println("Press 3 for Character support
+                                    """);
                             commonMessageSettingsEntry = inputFromUser.nextInt();
                             switch (commonMessageSettingsEntry) {
                                 case 1 -> {
                                     System.out.println("Delivery reports");
 
                                     System.out.println("""
-                                                Press 1 to go back to the previous Menu
-                                                Press 0 to go back to the Main Menu
-                                                Press CTRL+D to exit
+                                            Press 1 to go back to the previous Menu
+                                            Press 0 to go back to the Main Menu
+                                            Press CTRL+D to exit
                                             """);
                                     returnBack = inputFromUser.nextInt();
                                     if(returnBack == 1) Nokia.messagesMenu();
@@ -369,9 +375,9 @@ public class Nokia {
                                     System.out.println("Reply via same centre");
 
                                     System.out.println("""
-                                                Press 1 to go back to the previous Menu
-                                                Press 0 to go back to the Main Menu
-                                                Press CTRL+D to exit
+                                            Press 1 to go back to the previous Menu
+                                            Press 0 to go back to the Main Menu
+                                            Press CTRL+D to exit
                                             """);
                                     returnBack = inputFromUser.nextInt();
                                     if(returnBack == 1) Nokia.messagesMenu();
@@ -381,9 +387,9 @@ public class Nokia {
                                     System.out.println("Character support");
 
                                     System.out.println("""
-                                                Press 1 to go back to the previous Menu
-                                                Press 0 to go back to the Main Menu
-                                                Press CTRL+D to exit
+                                            Press 1 to go back to the previous Menu
+                                            Press 0 to go back to the Main Menu
+                                            Press CTRL+D to exit
                                             """);
                                     returnBack = inputFromUser.nextInt();
                                     if(returnBack == 1) Nokia.messagesMenu();
@@ -397,10 +403,10 @@ public class Nokia {
                     System.out.println("Info service");
 
                     System.out.println("""
-                                    Press 1 to go back to the previous Menu
-                                    Press 0 to go back to the Main Menu
-                                    Press CTRL+D to exit
-                                    """);
+                            Press 1 to go back to the previous Menu
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit
+                            """);
                     returnBack = inputFromUser.nextInt();
                     if(returnBack == 1) Nokia.messagesMenu();
                     if(returnBack == 0) nokiaMainMenu();
@@ -409,10 +415,10 @@ public class Nokia {
                     System.out.println("Voice mailbox number");
 
                     System.out.println("""
-                                    Press 1 to go back to the previous Menu
-                                    Press 0 to go back to the Main Menu
-                                    Press CTRL+D to exit
-                                    """);
+                            Press 1 to go back to the previous Menu
+                            Press 0 to go back to the Main Menu
+                            Press CTRL+D to exit
+                            """);
                     returnBack = inputFromUser.nextInt();
                     if(returnBack == 1) Nokia.messagesMenu();
                     if(returnBack == 0) nokiaMainMenu();
