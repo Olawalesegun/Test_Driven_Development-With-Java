@@ -5,22 +5,21 @@ public class ChristmasSong{
         int conditionUsed = 12;
         for(iteratingValue = 1; iteratingValue<=conditionUsed; iteratingValue++){
             switch(iteratingValue){
-                case 1 -> {
+                case 1 ->
                     System.out.println("""
                             On the first day of Christmas
                             my true love sent to me:
                             A Partridge in a Pear Tree
                             """);
-                }
-                case 2 -> {
+                case 2 ->
                     System.out.println("""
                             On the second day of Christmas
                             my true love sent to me:
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 3 -> {
+
+                case 3 ->
                     System.out.println("""
                             On the third day of Christmas
                             my true love sent to me:
@@ -28,8 +27,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 4 -> {
+                case 4 ->
                     System.out.println("""
                             On the fourth day of Christmas
                             my true love sent to me:
@@ -38,8 +36,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 5 -> {
+                case 5 ->
                     System.out.println("""
                             On the fifth day of Christmas
                             my true love sent to me:
@@ -49,8 +46,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 6 -> {
+                case 6 ->
                     System.out.println("""
                             On the sixth day of Christmas
                             my true love sent to me:
@@ -61,8 +57,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 7 -> {
+                case 7 ->
                     System.out.println("""
                             On the seventh day of Christmas
                             my true love sent to me:
@@ -74,8 +69,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 8 -> {
+                case 8 ->
                     System.out.println("""
                             On the eighth day of Christmas
                             my true love sent to me:
@@ -88,8 +82,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 9 -> {
+                case 9 ->
                     System.out.println("""
                             On the ninth day of Christmas
                             my true love sent to me:
@@ -103,8 +96,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 10 -> {
+                case 10 ->
                     System.out.println("""
                             On the tenth day of Christmas
                             my true love sent to me:
@@ -119,8 +111,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 11 -> {
+                case 11 ->
                     System.out.println("""
                             On the eleventh day of Christmas
                             my true love sent to me:
@@ -136,8 +127,7 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
-                case 12 -> {
+                case 12 ->
                     System.out.println("""
                             On the twelfth day of Christmas
                             my true love sent to me:
@@ -154,7 +144,6 @@ public class ChristmasSong{
                             2 Turtle Doves
                             and a Partridge in a Pear Tree
                             """);
-                }
             }
         }
     }
