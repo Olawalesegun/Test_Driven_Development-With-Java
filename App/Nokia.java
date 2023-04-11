@@ -475,12 +475,14 @@ public class Nokia {
                 case 3 -> System.out.println("Dialled numbers");
                 case 4 -> System.out.println("Erase recent call lists");
                 case 5 -> {
-                    System.out.println("Show call duration");
-                    System.out.println("Kindly Enter a number to Show call duration");
-                    System.out.println("Press 1 for Last call duration");
-                    System.out.println("Press 2 for all calls duration");
-                    System.out.println("Press 3 for all Received calls duration");
-                    System.out.println("Press 4 for Clear timers");
+                    System.out.println("""
+                            Show call duration
+                            Kindly Enter a number to Show call duration
+                            Press 1 for Last call duration
+                            Press 2 for all calls duration
+                            Press 3 for all Received calls duration
+                            Press 4 for Clear timer
+                            """);
                     callDurationEntry = inputFromUser.nextInt();
                     switch (callDurationEntry) {
                         case 1 -> {
