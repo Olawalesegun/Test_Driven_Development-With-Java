@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 public class DoWhile {
     static Scanner userInput = new Scanner(System.in);
