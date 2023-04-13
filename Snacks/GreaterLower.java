@@ -23,6 +23,7 @@ public class GreaterLower {
             if (numberToCompare > greaterValue) {
                 greaterValue = numberToCompare;
             }
+            if(numberToCompare == greaterValue || numberToCompare == greaterValue) System.out.println("The numbers are even");
             System.out.printf("The greater number you entered is: %d%n", greaterValue );
             System.out.printf("The lower number you entered is: %d%n", lowerValue);
 
