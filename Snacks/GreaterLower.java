@@ -6,7 +6,7 @@ public class GreaterLower {
         greaterAndLower();
     }
 
-    public static int greaterAndLower() {
+    public static void greaterAndLower() {
         int swapNo = 0;
         int greaterValue = Integer.MIN_VALUE;
         int lowerValue = Integer.MAX_VALUE;
@@ -30,6 +30,5 @@ public class GreaterLower {
             System.out.println("To halt this loop, enter 0, while to continue Press a number other than 0");
             num = userInput.nextInt();
         }
-        return swapNo;
     }
 }
