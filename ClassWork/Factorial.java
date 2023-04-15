@@ -8,6 +8,7 @@ public class Factorial {
                 facNumber--;
             }
             return facResult;
+            //Was going this route before but changed my Mind.
              /*for(int i= 0; i<facNumber; i++){
                facResult = facResult * (facNumber - 1);
             }*/
