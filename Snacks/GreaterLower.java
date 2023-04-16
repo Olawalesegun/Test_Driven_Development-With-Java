@@ -23,12 +23,17 @@ public class GreaterLower {
             if (numberToCompare > greaterValue) {
                 greaterValue = numberToCompare;
             }
-            if(numberToCompare == greaterValue || numberToCompare == greaterValue) System.out.println("The numbers are even");
-            System.out.printf("The greater number you entered is: %d%n", greaterValue );
-            System.out.printf("The lower number you entered is: %d%n", lowerValue);
 
             System.out.println("To halt this loop, enter 0, while to continue Press a number other than 0");
             num = userInput.nextInt();
+            if(num <= 0){
+                if(numberToCompare == greaterValue || numberToCompare == greaterValue) {
+                    System.out.printf("The greater number you entered is: %d%n", greaterValue );
+                    System.out.printf("The lower number you entered is: %d%n", lowerValue);
+                }
+            }
+
+
         }
     }
 }
