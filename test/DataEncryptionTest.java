@@ -22,7 +22,7 @@ class DataEncryptionTest {
         //given
         String data = "0149";
         //when
-        String encryptedData = dataEncryption.encryptData(data);
+        String encryptedData = dataEncryption.collectUs(data);
         System.out.println("encryption:: "+encryptedData);
         //assert
         assertEquals("1678", encryptedData);
@@ -37,7 +37,7 @@ class DataEncryptionTest {
         // TODO b. decryptData returns raw data
         //TODO 3. assert: that I get raw data => 0149
 
-        String decryption = dataEncryption.decryptData("1678");
+        String decryption = dataEncryption.decrypt("1678");
 
         assertEquals("0149", decryption);
 
@@ -46,7 +46,7 @@ class DataEncryptionTest {
     @Test
     public void testDecryptData1(){
 
-        String decryption = dataEncryption.decryptData("16666666678");
+        String decryption = dataEncryption.decrypt("16666666678");
 
         assertNotNull(decryption);
     }
