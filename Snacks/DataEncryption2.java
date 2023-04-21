@@ -1,5 +1,15 @@
-public class DataEncryption {
-    public static void main(String[] args) {
+public class DataEncryption2 {
+
+
+
+
+
+
+
+
+
+
+    /*public static void main(String[] args) {
         encryptData("0149");
     }
 
@@ -31,5 +41,5 @@ public class DataEncryption {
         finalException = firstEncryptChar +""+secEncryptChar+""+thirdEncryptChar+""+fourthEncryptChar;
         return finalException;
     }
-
+*/
 }
