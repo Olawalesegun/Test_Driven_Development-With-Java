@@ -65,16 +65,27 @@ public class DataEncryption {
 
     public static String decrypt(String input){
         String returnDecrypt = "nothingYet";
+        int unswap;
         if(input.length() == 4){
             int[] collect = new int[4];
             int[] decryptValue = new int[4];
             for(int count = 0; count<input.length(); count++){
                collect[count] = (int)input.charAt(count) - '0';
-               decryptValue[count] = (collect[count] + 10) - 7;
+               decryptValue[count] = ((collect[count] + 10) - 7) % 10;
+               //decryptValue[count] = decryptValue[count] % 10;
             }
+
+            unswap = decryptValue[0];
+            decryptValue[0] = decryptValue[2];
+            decryptValue[2] = unswap;
+            unswap = decryptValue[1];
+            decryptValue[1] = decryptValue[3];
+            decryptValue[3] = unswap;
 
             returnDecrypt = decryptValue[0] + "" + decryptValue[1] + "" + decryptValue[2] +
                     "" + decryptValue[3];
+
+            System.out.println(returnDecrypt);
         }
         else{
             System.out.println("My Friend, you must do the needful, by entering the required length");
