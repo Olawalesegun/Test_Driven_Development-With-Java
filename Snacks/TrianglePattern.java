@@ -30,7 +30,7 @@ public class TrianglePattern {
     public static void upsideRightTrianglePattern(){
         int conditionForLoop = 10;
         for(int loop1=1; loop1<=conditionForLoop; loop1++){
-            for(int loop2=conditionForLoop; loop2<=loop1 ; loop2--){
+            for(int loop2=conditionForLoop; loop2>=loop1 ; loop2--){
                 System.out.print("*");
             }
             System.out.println();
