@@ -5,6 +5,7 @@ public class TrianglePattern {
         upsideLeftTrianglePattern();
         System.out.println();
         upsideRightTrianglePattern();
+        System.out.println();
         rightTrianglePattern();
     }
 
