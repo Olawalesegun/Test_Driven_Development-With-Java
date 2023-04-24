@@ -1,4 +1,7 @@
 public class ReverseMultiplication {
+    //  To run the program with test driven development
+    //  We won't be needing the Psvm and the method won't have to be static
+    //  But, to run it directly we need the Psvm
     public static void main(String[] args) {
         int countCondition = 1;
         for(int count=12; count>=countCondition; count--){
