@@ -5,6 +5,7 @@ public class TrianglePattern {
         upsideLeftTrianglePattern();
         System.out.println();
         upsideRightTrianglePattern();
+        rightTrianglePattern();
     }
 
     public static void leftTrianglePattern(){
@@ -38,17 +39,17 @@ public class TrianglePattern {
                 System.out.print(" ");
             }
         }
-        /*int condition = 10;
-        int loop2;
-        for(int loopCount=1; loopCount<=condition; loopCount++){
-            for(loop2=loopCount; loop2<=condition; loop2++){
+    }
+    public static void rightTrianglePattern(){
+        int conditionForLoop=10;
+        for(int loop1=1; loop1<=conditionForLoop; loop1++){
+            for(int loop2=conditionForLoop; loop2>=loop1; loop2--){
+                System.out.print(" ");
+            }
+            for(int loop3=0; loop3<loop1; loop3++){
                 System.out.print("*");
             }
             System.out.println();
-            for(int loop3 = 0; loop3<loopCount; loopCount++){
-                System.out.println(" ");
-            }*/
-         //   for(int i= 1; i<condition; i++){
-          //     for(j = 1; ) System.out.print(" ");
+        }
     }
 }
