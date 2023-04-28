@@ -11,6 +11,7 @@ public class PetrolPurchase {
     minus the discount, then returns the net amount you had to pay as a double value. Write an appli-
     cation class named Petrol that demonstrates the capabilities of class PetrolPurchase.*/
 
+
     //TODO:
     //  1. Create a Class
     //  2. Create instance variable (stationLocation: String, petrolType: String,
@@ -73,7 +74,18 @@ public class PetrolPurchase {
     public double getPurchase(int quantity, double discount, double ppl){
         double netPurchase = (quantity * ppl) - discount;
         return netPurchase;
+
+        /*//The method getpurchase calculates the net purchase (quantity * price per litre) - discount
+        Scanner userInput = new Scanner(System.in);
+        System.out.println("Enter the required quantity");
+        int qty = userInput.nextInt();
+        setPetrolQuantity(qty);
+        System.out.println("Enter the price per litre");
+        double quantity = getPetrolQuantity();
+        double ppl = getPricePerLitre();
+        double discount = getPercentageDiscount();*/
     }
+
 
 
 }
