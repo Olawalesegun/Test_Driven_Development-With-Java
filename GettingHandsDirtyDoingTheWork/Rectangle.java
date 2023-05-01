@@ -23,6 +23,13 @@ public class Rectangle {
         System.out.println(perimeter);
         return this;
     }
+
+
+    //  Reasons why we need Method Chaining:
+    //      1. Fluent API Design
+    //      2. Code Re-usability
+    //      3. Code Maintainability
+    //      4. Reliability
 }
 
 
