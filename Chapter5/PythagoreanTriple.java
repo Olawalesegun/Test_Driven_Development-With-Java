@@ -25,11 +25,18 @@ public class PythagoreanTriple {
         int side2;
         int hypothenuss = 0;*/
         int cantBeLargerThan = 500;
+        int hypo = 0;
+        int sideOne = 0;
+        int sideTwo = 0;
         System.out.println("This Pythagorean Triangle is aimed for Brute Force:");
         for (int side1 = 1; side1 <= cantBeLargerThan; side1++) {
             for (int side2 = 1; side2 <= cantBeLargerThan; side2++) {
                 for (int hypotenuss = 1; hypotenuss <= cantBeLargerThan; hypotenuss++){
-                    if (side1 * side1 + side2 * side2 == hypotenuss * hypotenuss) {
+                    hypo = hypotenuss * hypotenuss;
+                    sideOne = side1 * side1;
+                    sideTwo = side2 * side2;
+                    if (sideOne + side2 * sideTwo == hypo) {
+                        System.out.println("This is checking if the summation of side1 and side2 equals to hypo");
                         System.out.printf("%d\t%d\t%d%n", side1, side2, hypotenuss);
                     }
                 }
