@@ -33,6 +33,7 @@ public class RoundingNumbers {
             num = num * tenth;
             num = num / tenth;
         }
+        System.out.println("Here are the values, num1: " + num1 + "tenth: " + tenth + "num2: " + num2);
         return num;
     }
 }
