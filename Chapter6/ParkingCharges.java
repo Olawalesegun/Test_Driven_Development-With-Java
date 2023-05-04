@@ -22,10 +22,17 @@ public class ParkingCharges {
     //    8. Declare method calculateCharges to determine charge for customers
 
     private double parkingHours;
-    private static int totalReceipts;
+    private static int totalReceipts = 0;
 
+    public static void main(String[] args) {
+        ParkingCharges parkC = new ParkingCharges(10);
+        parkC.calculateCharges(parkC.getParkingHours(3));
+        ParkingCharges parkO = new ParkingCharges(5);
+        parkO.calculateCharges(parkC.getParkingHours(6));
+    }
     public ParkingCharges(double parkingHours){
         this.parkingHours = parkingHours;
+        //totalReceipts++;
     }
     public double getParkingHours( double parkingHours){
         if(parkingHours>0) this.parkingHours = parkingHours;
@@ -71,9 +78,12 @@ public class ParkingCharges {
             charge = 10;
         }
         if(charge<=10.00){
+            //firstCopy of receipt for Customers
            getTotalReceipts();
         }
+        //second copy of receipt for management
         System.out.println("The number of times, this receipt was printed is: " + getTotalReceipts());
+        System.out.println("The charge is: $" + charge);
         return charge;
     }
 
