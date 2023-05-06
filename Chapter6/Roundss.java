@@ -1,4 +1,4 @@
-public class Rounds {
+public class Roundss {
 
   /*  (Rounding Numbers) To round numbers to specific decimal places, use a statement like
     double y = Math.floor(x * 10 + 0.5) / 10;
@@ -58,6 +58,7 @@ public class Rounds {
         }*/
     return num;
     }
+
 
     public static double roundDown(double num1, int tenth, int num2){
         double num = num1 * tenth;
