@@ -9,25 +9,44 @@ public class FloorAndCeil {
 */
 
     public static int myFloor(double num){
-        int numModulus10Result =0;
-        int numDivideBy10Result = 0;
+        int numModulus10Result;
+        int numDivideBy10Result;
         int secondNumGottenFromSecondEvaluation = 0;
         if(num > 0){
            num = num * 10;
            numModulus10Result = (int) (num % 10);
            numDivideBy10Result = (int) (num/10);
            num = numDivideBy10Result;
-          /* if(numModulus10Result > 10){
-               numModulus10Result / 10;
-           }*/
+
+            //NOTE: I am taking the modulus value here just incase sometime later
+            // we might need the decimal values for computation.
+            // and when I need it, I might need some sort of selection control structure to drive result
+                /* if(numModulus10Result > 10){
+                        numModulus10Result / 10;
+                 }*/
+
+
         }else{
             System.exit(0);
           /*  num = num * 10;
             numDivideBy10Result = (int) (num/10);
-            num = numDivideBy10Result - 1;*/
+            num = numDivideBy10Result - 1;
+            */
         }
         return (int)num;
     }
 
-
+    public static int myCeil(double num){
+        int numDividesBy10Result = 0;
+        if(num > 0){
+            num = num * 10;
+            numDividesBy10Result = (int)(num / 10);
+            num = numDividesBy10Result + 1;
+            //NOTE: I did not take the modulus result because in real sense we don't need it to compute this task.
+        }
+        else{
+            System.exit(1);
+        }
+        return (int)num;
+    }
 }
