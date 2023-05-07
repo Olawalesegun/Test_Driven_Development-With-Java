@@ -35,7 +35,7 @@ public class PythagoreanTriple {
                     hypo = hypotenuss * hypotenuss;
                     sideOne = side1 * side1;
                     sideTwo = side2 * side2;
-                    if (sideOne + side2 * sideTwo == hypo) {
+                    if (sideOne + sideTwo == hypo) {
                         System.out.println("This is checking if the summation of side1 and side2 equals to hypo");
                         System.out.printf("%d\t%d\t%d%n", side1, side2, hypotenuss);
                     }
