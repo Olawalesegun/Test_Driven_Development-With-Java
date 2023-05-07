@@ -2,19 +2,24 @@ import java.util.Random;
 import java.security.SecureRandom;
 public class RandomOutput {
     /*
-    Write statements that will display a random number from each of the following sets:
-    a) 0, 3, 6, 9, 12.
-    b) 1, 2, 4, 8, 16, 32.
-    c) 10, 20, 30, 40.
+        Write statements that will display a random number from each of the following sets:
+            a) 0, 3, 6, 9, 12.
+            b) 1, 2, 4, 8, 16, 32.
+            c) 10, 20, 30, 40.
     */
     public static void main(String[] args) {
-        int[] arrayValues = {6, 7,8,9};
-        RandomOutput.findrandomNumber(arrayValues);
+        int[] arraySet = {6, 7,8,9};
+        RandomOutput.findRandomNumber(arraySet);
         System.out.println("==================================");
-        int[] arrayValues2 = {1, 2, 4, 8, 16, 32};
-        RandomOutput.findSecuredRandomNumber(arrayValues2);
+        int[] arraySet2 = {1, 2, 4, 8, 16, 32};
+        RandomOutput.findSecuredRandomNumber(arraySet2);
+        System.out.println("==================================");
+        int[] arraySet3 = {10, 20, 30, 40};
+        RandomOutput.findRandomNumber(arraySet3);
+        int sumOfTwoMethods = findRandomNumber(arraySet) + findRandomNumber(arraySet);
+        System.out.println("The summation of the two methods are: " + sumOfTwoMethods);
     }
-    public static int findrandomNumber(int[] arrayFirstSet){
+    public static int findRandomNumber(int[] arrayFirstSet){
         Random randomNum = new Random();
         int arrayIndexCount = arrayFirstSet.length;
         int randomDeclaration = randomNum.nextInt(arrayIndexCount);
