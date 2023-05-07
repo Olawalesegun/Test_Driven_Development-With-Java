@@ -3,10 +3,10 @@ public class ValueOfPie3 {
         double pi = 4.0;
         double denominator = 3.0;
         boolean positive = false;
-        int terms = 200000;
-        int count = 0;
+        int termsForLoopToRun = 200000;
+        int counterToCheckForHowManyTimesItExists = 0;
         System.out.println("Terms\tValue of π");
-        for (int i = 1; i <= terms; i++) {
+        for (int counterToLoopThroughTerms = 1; counterToLoopThroughTerms <= termsForLoopToRun; counterToLoopThroughTerms++) {
             if (positive) {
                 pi += 4.0/denominator;
             } else {
@@ -15,12 +15,12 @@ public class ValueOfPie3 {
             denominator += 2.0;
             positive = !positive;
             if (String.format("%.5f", pi).startsWith("3.14159")) {
-                count = i;
+                counterToCheckForHowManyTimesItExists = counterToLoopThroughTerms;
             }
-            if (i % 1000 == 0) {
-                System.out.println(i + "\t" + pi);
+            if (counterToLoopThroughTerms % 1000 == 0) {
+                System.out.println(counterToCheckForHowManyTimesItExists + "\t" + pi);
             }
         }
-        System.out.println("Terms needed for first value starting with 3.14159: " + count);
+        System.out.println("Terms needed for first value starting with 3.14159: " + counterToCheckForHowManyTimesItExists);
     }
 }
