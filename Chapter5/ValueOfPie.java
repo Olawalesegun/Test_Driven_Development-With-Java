@@ -11,8 +11,8 @@ public class ValueOfPie {
     }
     public void calcValueOfPie(){
         int conditionForComputingSeries = 200_000;
-        double numberToRunComputingFor = 4.0;
-        double numerator = 4.0;
+        //double numberToRunComputingFor = 4.0;
+        final double numerator = 4.0;
         int denominator = 3;
         double result = 0;
         int counter = 0;
@@ -21,6 +21,7 @@ public class ValueOfPie {
                 result -= (double)(numerator / denominator);
                /* numberToRunComputingFor -= 4 - result;*/
                 String resultConverted = decForm.format(result);
+                System.out.println("Here is the result when converted to 5 decimal place: " + resultConverted);
                 System.out.println(numerator + "/" + denominator + "=" + result);
                 if (String.format("%.5f", result).startsWith("3.14159")) {
                     System.out.println("The result is now: " + result + " hence it will now break");
