@@ -26,13 +26,22 @@ public class Roundss {
       return result;
     }
     public static double roundToTenths(double number){
-        double result = Math.floor(number * 10 + 0.5)/10;
-        System.out.println("Result for rounding to Tenths is: " + result);
-       return result;
+      double result = Math.floor(number * 10 + 0.5)/10;
+      System.out.println("Result for rounding to Tenths is: " + result);
+      return result;
+    }
+    public static double roundToHundredths(double number){
+      double result = Math.floor(number * 100 + 0.5)/100;
+      System.out.println("Result for rounding to Hundredths is: " + result);
+      return result;
+    }
+    public static double roundToThousandths(double number){
+      double result = Math.floor(number * 1000 + 0.5)/1000;
+      System.out.println("Result for rounding " + number + " to hundredths is: " + result);
+      return result;
     }
   //    Second approach for me to do this is to devise a program that does the function of Math.floor in the program
     public static int roundToInteger(double number){
-
       if(number - (int)number == 0){
           int numModulusValue = (int)(number % 10);
           int numActualValueWhenDivided = (int) (number / 10);

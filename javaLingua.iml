@@ -7,6 +7,13 @@
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/GettingHandsDirtyDoingTheWork" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/App" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Snacks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ClassWork" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Prep" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Chapter4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Chapter5" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Chapter6" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Chapter7" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -26,5 +33,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MAVEN_REPOSITORY$/org/jetbrains/annotations/24.0.0/annotations-24.0.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module" module-name="Prep" scope="TEST" />
   </component>
 </module>

@@ -26,7 +26,7 @@ public class TwoLargestNumber {
                 min = numEntered;
             }
         }
-        System.out.println("The Largest num is " + max1 + " " + max2 +
+        System.out.println("The Largest num is " + max1 + " The second Largest is: " + max2 +
                 " While min is: "+ min);
     }
 }

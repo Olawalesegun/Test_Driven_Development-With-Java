@@ -18,7 +18,6 @@ public class PixelQuantization {
         h) For 141–160: 150
         i) For 161–180: 170, and for all other pixel values, assumed a quantized value of 190
         Print the array with the new, quantized values
-
     */
     public static void main(String[] args) {
         int[] array1 = {41, 23, 86, 78, 100, 53, 99};
