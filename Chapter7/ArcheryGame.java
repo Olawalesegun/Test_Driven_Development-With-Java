@@ -1,6 +1,6 @@
 import java.security.SecureRandom;
 public class ArcheryGame {
-    SecureRandom secRand = new SecureRandom()
+    static SecureRandom secRand = new SecureRandom();
        /*
        7.20 (Archery Game) A group of four friends visit a sports club and they decide to practice ar-
        chery. Each player gets 3 chances and in every chance they can score between 0 to 10 points. The
@@ -28,12 +28,21 @@ public class ArcheryGame {
    /* public void getPlayerSum(int[][] array){
         Se
     }*/
-    public int playerIndex(int[][] array) {
-        int[] totalArray;
+   public static void main(String[] args) {
+       int[][] archGame = {
+               {1,2,3,},
+               {7,8,9},
+               {7,2,1},
+               {6,4,3}
+       };
+       playerIndex(archGame);
+   }
+    public static void playerIndex(int[][] array) {
+        //int[] totalArray;
         int total1 = 0;
         int total2 = 0, total3 = 0;
         for (int counter = 0; counter < array.length; counter++) {
-            for (int counter2 = 0; counter2 < 3; counter++) {
+            for (int counter2 = 0; counter2 < 3; counter2++) {
                 array[counter2][counter2] = secRand.nextInt(1, 11);
                 if (counter == 0 && counter2 <= 3) {
                     total1 = total1 + array[counter][counter];
@@ -44,7 +53,23 @@ public class ArcheryGame {
                 if (counter == 2 && counter2 <= 3) {
                     total3 += array[counter][counter2];
                 }
+               // System.out.print("Player" + counter + 1 +"\t"+array[0][0]+"\t");
             }
+            //System.out.println();
+        }
+        /*System.out.println("Player Number\t First Chance Score\t Second Chance Score\tThird Chance Score");
+        System.out.println("Player 1 \t"+array[0][0]+"\t"+array[0][1]+"\t"+array[0][2]);*/
+        if(total1 > total2 && total1 > total3){
+            System.out.println("The player with the maximum score is Player 1 with: " + total1);
+        }
+        else if(total2 > total1 && total2 > total3){
+            System.out.println("The player with the maximum score is Player 2 with: " + total2);
+        }
+        else if(total3 > total1 && total3 > total2){
+            System.out.println("The player with the maximum score is Player 3 with: " + total3);
+        }
+        else{
+            System.out.println("These numbers are even");
         }
     }
 }
