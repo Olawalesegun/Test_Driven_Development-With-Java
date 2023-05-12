@@ -9,8 +9,11 @@ public class dimArray {
     c) Display the ten values of integer array bestScores, each on a new line.*/
 
     public static void main(String[] args) {
-        int[] array = new int[20];
-        dimArray.setElement(array);
+        int[] arraySecondCollection = new int[20];
+        dimArray.setElement(arraySecondCollection);
+        arraySecondCollection = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 2, 4, 5, 8, 9, 5, 3, 2, 5, 6};
+        multiplyElement(arraySecondCollection);
+        display10ValuesOfAnArray(arraySecondCollection);
     }
     public static int[] setElement(int[] array) {
         int conditionIndex = 10;
