@@ -25,11 +25,12 @@ public class populateArray {
         System.out.println(Arrays.deepToString(arr));
     }
 
-    public static void populateArray(int[] array){
+    public static void populateAllElementsOfArray(int[] array){
         for(int index = ZERO; index<array.length; index++){
             array[index] = index;
         }
     }
+    //Other approaches to disfranchise the array and populate the method.
     public static void populateFirstRow(int[] firstRow, int index){
         firstRow[index] = index;
     }
