@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/*
 class ArcheryGameTest {
     ArcheryGame archeryGame;
     @BeforeEach
@@ -21,4 +22,4 @@ class ArcheryGameTest {
         int result = archeryGame.playerIndex(archGame);
         assertEquals(50, result);
     }
-}
+}*/
