@@ -5,12 +5,12 @@ public class RevTest {
 
     @Test
     public void testReverseArray() {
-        ReverseArray reverseArray = new ReverseArray();
+        Rev reverseArray = new Rev();
         int[] originalArray = {1, 2, 3, 4, 5};
-        int[] expectedReversedArray = {5, 4, 3, 2, 1};
         reverseArray.setArray(originalArray);
         reverseArray.reverseArray();
         int[] actualReversedArray = reverseArray.collectReverseArray();
+        int[] expectedReversedArray = {5, 4, 3, 2, 1};
         assertArrayEquals(expectedReversedArray, actualReversedArray);
     }
 }
