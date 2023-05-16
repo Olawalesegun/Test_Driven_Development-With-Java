@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class OddPositionsInArrayElement {
-
+    //Write a method that prints the elements on odd positions in a list.
     private int[] array = new int[6];
 
     private int[] elementAtOddIndex = new int[array.length];
