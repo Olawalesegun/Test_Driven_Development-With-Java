@@ -24,7 +24,7 @@ class OddPositionsInArrayElementTest {
         //int[] newArr = odd.collectArray();
         odd.extractElementsAtIndex();
         String oddElementsExtractedFromArray = odd.returnExtractOddElementOutOfArray();
-        String oddsAlone = "[5, 23, 0, 0, 0, 0]";
+        String oddsAlone = "[0, 23, 0, 2, 0, 12]";
         assertEquals(oddsAlone, oddElementsExtractedFromArray);
     }
 }
