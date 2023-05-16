@@ -5,7 +5,7 @@ import java.util.Arrays;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OddPositionsInArrayElementTest {
-    //Write a method that prints the elements on odd positions in a list.
+    //Write a method that prints the elements on odd positions.
     OddPositionsInArrayElement odd = new OddPositionsInArrayElement();
     @Test
     public void testOdd(){
@@ -25,6 +25,17 @@ class OddPositionsInArrayElementTest {
         odd.extractElementsAtIndex();
         String oddElementsExtractedFromArray = odd.returnExtractOddElementOutOfArray();
         String oddsAlone = "[0, 23, 0, 2, 0, 12]";
+        assertEquals(oddsAlone, oddElementsExtractedFromArray);
+    }
+
+    @Test
+    public void testOdd3(){
+        int[] arrayCollected = {5, -7, 14, -0, 6, -100};
+        odd.setArray(arrayCollected);
+        //int[] newArr = odd.collectArray();
+        odd.extractElementsAtIndex();
+        String oddElementsExtractedFromArray = odd.returnExtractOddElementOutOfArray();
+        String oddsAlone = "[0, -7, 0, 0, 0, -100]";
         assertEquals(oddsAlone, oddElementsExtractedFromArray);
     }
 }
