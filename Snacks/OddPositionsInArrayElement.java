@@ -19,10 +19,12 @@ public class OddPositionsInArrayElement {
                 elementAtOddIndex[indexThroughArray] = collectArray()[indexThroughArray];
             }
         }
+
     }
 
     public String returnExtractOddElementOutOfArray() {
         return Arrays.toString(elementAtOddIndex);
     }
+
 
 }
