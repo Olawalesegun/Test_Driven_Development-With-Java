@@ -24,7 +24,7 @@ class ReverseArrayTest {
         rev.reverseArray();
         int[] collectedReversedArray = rev.collectReverseArray();
         int[] reversedArrayExpectedAsResult = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
-        assertEquals(reversedArrayExpectedAsResult, collectedReversedArray);
+        assertArrayEquals(reversedArrayExpectedAsResult, collectedReversedArray);
     }
     @Test
     public void testArrayReverse2(){
@@ -34,7 +34,7 @@ class ReverseArrayTest {
         rev.reverseArray();
         int[] collectedReversedArray = rev.collectReverseArray();
         int[] reversedArrayExpectedAsResult = {40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30};
-        assertEquals(Arrays.toString(reversedArrayExpectedAsResult), Arrays.toString(collectedReversedArray));
+        assertArrayEquals(reversedArrayExpectedAsResult, collectedReversedArray);
     }
 
 //    @Test
