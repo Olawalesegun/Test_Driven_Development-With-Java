@@ -18,6 +18,6 @@ public class NaturalNumbers {
                     "To print the first 10 Natural number" +
                     " Kindly enter 1");
         }
-
+Object
     }
 }
