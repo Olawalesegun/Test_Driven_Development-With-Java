@@ -1,4 +1,6 @@
 import java.security.SecureRandom;
+import java.util.Arrays;
+
 public class ArcheryGame {
     static SecureRandom secRand = new SecureRandom();
        /*
@@ -37,7 +39,7 @@ public class ArcheryGame {
        };
        playerIndex(archGame);
    }
-    public static void playerIndex(int[][] array) {
+    public static int[][] playerIndex(int[][] array) {
         //int[] totalArray;
         int total1 = 0;
         int total2 = 0, total3 = 0;
@@ -71,5 +73,6 @@ public class ArcheryGame {
         else{
             System.out.println("These numbers are even");
         }
+        return array;
     }
 }
