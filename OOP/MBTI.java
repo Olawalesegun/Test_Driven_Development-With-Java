@@ -12,11 +12,12 @@ public class MBTI {
         mb.solveQuestion2();
         mb.solveQuestion3();
         mb.solveQuestion4();
+        mb.solveQuestion5();
     }
     public void solveQuestion1() {
         System.out.println("This is the first question to your personality test, you can only pick A or B");
         System.out.println(MbtiQuestion.QUESTION1.getQuestion());
-        System.out.println("Select your answer");
+        System.out.print("Select your answer: ");
         String answer1 = userInput.nextLine();
         char newAns1 = ' ';
         if (answer1.length() == String.valueOf(MbtiQuestion.QUESTION1.getAnswer()).length()) newAns1 = answer1.charAt(0);
@@ -28,16 +29,18 @@ public class MBTI {
     public void solveQuestion2(){
         System.out.println("This is the second question to your personality test, kindly pick A or B");
         System.out.println(MbtiQuestion.QUESTION2.getQuestion());
+        System.out.print("Select your answer: ");
         String answer2 = userInput.nextLine();
         char newAns2 = ' ';
         if(answer2.length() == String.valueOf(MbtiQuestion.QUESTION2.getAnswer()).length()) newAns2 = answer2.charAt(0);
         else System.out.println(moreThanCharacterErrorMessage);
-        if(newAns2 == MbtiQuestion.QUESTION2.getAnswer()) System.out.println("User is classified as spontaneous and intuitive");
-        else System.out.println("User is classified as organized and methodical in their approach");
+        if(newAns2 == MbtiQuestion.QUESTION2.getAnswer()) System.out.println("You are classified as spontaneous and intuitive");
+        else System.out.println("You are classified to be organized and methodical in their approach");
     }
     public void solveQuestion3(){
         System.out.println("This is third question for your personality test, Kindly Pick A or B");
         System.out.println(MbtiQuestion.QUESTION3.getQuestion());
+        System.out.print("Select your answer: ");
         String answer3 = userInput.nextLine();
         char newsAns3 = ' ';
         if(answer3.length() == String.valueOf(MbtiQuestion.QUESTION3.getAnswer()).length()){
@@ -58,6 +61,7 @@ public class MBTI {
     public void solveQuestion4(){
         System.out.println("This is the Fourth Question for your personality test, Kindly Pick A or B");
         System.out.println(MbtiQuestion.QUESTION4.getQuestion());
+        System.out.print("Select your answer: ");
         String answer4 = userInput.nextLine();
         char newAns4 = ' ';
         if(answer4.length() == String.valueOf(MbtiQuestion.QUESTION4.getAnswer()).length()) newAns4 = answer4.charAt(0);
@@ -72,6 +76,27 @@ public class MBTI {
                 This personality trait accept things the way they are and aligns more with a Judging preference, 
                 indicating a preference for structure, organization, and closure.
                 """);
+    }
+    public void solveQuestion5(){
+        System.out.println("This is the Fifth Question for your personality test, Kindly Pick A or B");
+        System.out.println(MbtiQuestion.QUESTION5.getQuestion());
+        System.out.print("Select your answer: ");
+        String answer5 = userInput.nextLine();
+        char newAns5 = ' ';
+        if(answer5.length() == String.valueOf(MbtiQuestion.QUESTION5.getAnswer()).length()) newAns5 = answer5.charAt(0);
+        else System.out.println(moreThanCharacterErrorMessage);
+        if(newAns5 == MbtiQuestion.QUESTION5.getAnswer())
+            System.out.println("""
+                    This personality trait shows you prioritize fairness, equity, and adherence to rules and principles 
+                    in determining what is morally right or wrong. Your moral judgments would likely be guided by concepts 
+                    such as rights, equality, and impartiality.
+                    """);
+        else System.out.println("""
+                    This personality trait shows that you prefer to base morality on compassion, it means you prioritize empathy, 
+                    kindness, and consideration for others' well-being in determining what is morally right or wrong. 
+                    Your moral judgments would likely be guided by the desire to alleviate suffering, promote kindness, 
+                    and show compassion towards others.
+                    """);
     }
 
 
