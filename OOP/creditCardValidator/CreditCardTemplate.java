@@ -28,5 +28,11 @@ public class CreditCardTemplate {
     public int getCardDigitLength(){
         return getCardNumber().length();
     }
+    public void setCardValidityStatus(String validityStatus){
+        this.cardValidityStatus = validityStatus;
+    }
+    public String getCardValidityStatus(){
+        return cardValidityStatus;
+    }
 
 }
