@@ -1,8 +1,12 @@
+package myersbriggs;
+
 import java.util.Scanner;
 public class MBTI {
 
-    /*MbtiQuestion[] mbtiQ;
-    String[] collectQuestion = new String[mbtiQ.length];*/
+    /*
+        /* MbtiQuestion[] mbtiQ;
+        String[] collectQuestion = new String[mbtiQ.length];
+    */
     private final String moreThanCharacterErrorMessage =  "Hey Mate, you have entered more than the required Character";
     Scanner userInput = new Scanner(System.in);
 
@@ -48,13 +52,13 @@ public class MBTI {
         } else System.out.println(moreThanCharacterErrorMessage);
         if(newsAns3 == MbtiQuestion.QUESTION3.getAnswer())
             System.out.println("""
-                This shows you are more inclined to express dissatisfaction or discontent with a situation, 
-                which means you are more motivated to take action to address and improve the situation, 
+                This shows you are more inclined to express dissatisfaction or discontent with a situation,
+                which means you are more motivated to take action to address and improve the situation,
                 rather than passively accepting things as they are.
                 """);
         else System.out.println("""
-                This shows you accept things the way they are! You would be more inclined to embrace the current state 
-                of affairs and choose not to challenge or change it. You may have a more accepting or contented attitude 
+                This shows you accept things the way they are! You would be more inclined to embrace the current state
+                of affairs and choose not to challenge or change it. You may have a more accepting or contented attitude
                 towards the situation, even if it deviates from your expectations or preferences.
                 """);
     }
@@ -68,13 +72,12 @@ public class MBTI {
         else System.out.println(moreThanCharacterErrorMessage);
         if(newAns4 == MbtiQuestion.QUESTION4.getAnswer())
             System.out.println("""
-                    This personality trait aligns more with a Perceiving preference, 
-                    indicating a tendency to stay open-ended, adaptable, 
+                    This personality trait aligns more with a Perceiving preference
+                    indicating a tendency to stay open-ended, adaptable,
                     and flexible.
                     """);
         else System.out.println("""
-                This personality trait accept things the way they are and aligns more with a Judging preference, 
-                indicating a preference for structure, organization, and closure.
+                This personality trait accept things the way they are and aligns more with a Judging preference,                indicating a preference for structure, organization, and closure.
                 """);
     }
     public void solveQuestion5(){
@@ -87,14 +90,14 @@ public class MBTI {
         else System.out.println(moreThanCharacterErrorMessage);
         if(newAns5 == MbtiQuestion.QUESTION5.getAnswer())
             System.out.println("""
-                    This personality trait shows you prioritize fairness, equity, and adherence to rules and principles 
-                    in determining what is morally right or wrong. Your moral judgments would likely be guided by concepts 
+                    This personality trait shows you prioritize fairness, equity, and adherence to rules and principles
+                    in determining what is morally right or wrong. Your moral judgments would likely be guided by concepts
                     such as rights, equality, and impartiality.
                     """);
         else System.out.println("""
-                    This personality trait shows that you prefer to base morality on compassion, it means you prioritize empathy, 
-                    kindness, and consideration for others' well-being in determining what is morally right or wrong. 
-                    Your moral judgments would likely be guided by the desire to alleviate suffering, promote kindness, 
+                    This personality trait shows that you prefer to base morality on compassion, it means you prioritize empathy,
+                    kindness, and consideration for others' well-being in determining what is morally right or wrong.
+                    Your moral judgments would likely be guided by the desire to alleviate suffering, promote kindness,
                     and show compassion towards others.
                     """);
     }
@@ -122,7 +125,7 @@ public class MBTI {
         }
     }*/
 /*
-    char[] answersFromUsers = new char[mbtiQ.values().length];
+    /*char[] answersFromUsers = new char[mbtiQ.values().length];
     public void setQuestion1(){
         mbtiQ.QUESTION1.valueOf(question);
     }
