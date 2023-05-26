@@ -1,3 +1,4 @@
+package myersbriggs;
 public enum MbtiQuestion {
 
     QUESTION1('A', """
@@ -63,7 +64,7 @@ public enum MbtiQuestion {
     QUESTION13('B', """
             13. Do you:
             a. want the big picture
-            b. wants the details 
+            b. wants the details
             """),
     QUESTION14('B', """
             14. Would you rather:
