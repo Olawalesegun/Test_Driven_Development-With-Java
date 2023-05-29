@@ -1,2 +1,7 @@
-package uml;public class Brakes {
+package uml;
+
+public class Brakes {
+    public String getBrakeInfo(){
+        return null;
+    }
 }

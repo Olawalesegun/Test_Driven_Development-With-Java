@@ -1,2 +1,5 @@
-package uml;public class FrontWheel {
+package uml;
+
+public class FrontWheel {
+
 }

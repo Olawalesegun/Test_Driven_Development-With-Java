@@ -1,2 +1,5 @@
-package uml;public class SteerSystem {
+package uml;
+
+public class SteerSystem {
+    public void setWheelDirection(){}
 }

@@ -1,2 +1,5 @@
-package uml;public class Pedal {
+package uml;
+
+public class Pedal {
+    public void moveBike(){}
 }

@@ -1,2 +1,5 @@
-package uml;public class HandleBar {
+package uml;
+
+public class HandleBar {
+    public void steerWheel(){}
 }

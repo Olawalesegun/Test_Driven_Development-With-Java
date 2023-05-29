@@ -1,2 +1,5 @@
-package uml;public class BrakeSystem {
+package uml;
+
+public class BrakeSystem {
+    public void reduceRPM(){}
 }

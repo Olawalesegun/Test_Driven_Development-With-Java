@@ -1,2 +1,8 @@
-package uml;public class BrakeLever {
+package uml;
+
+public class BrakeLever {
+    public void activateBrakes(){
+
+    };
+
 }

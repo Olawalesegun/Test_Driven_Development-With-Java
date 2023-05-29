@@ -1,2 +1,5 @@
-package uml;public class DriveSystem {
+package uml;
+
+public class DriveSystem {
+    public void increaseRPM(){}
 }
