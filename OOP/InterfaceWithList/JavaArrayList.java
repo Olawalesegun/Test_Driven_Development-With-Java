@@ -1,32 +1,36 @@
 package InterfaceWithList;
 
 
-public class ArrayList implements List {
+public class JavaArrayList implements JavaList {
     private int counter;
-    private int length;
-    private String[] db;
+    private int lengthOfArray;
+    private String[] elementsCollector;
 
+    public JavaArrayList(){
+        this.counter = counter;
+        this.lengthOfArray = lengthOfArray;
+    }
 
     @Override
     public void add(String element) {
         if (counter == 0) {
-            length = 5;
-            db = new String[length];
+            lengthOfArray = 5;
+            elementsCollector = new String[lengthOfArray];
         }
-        if (counter == length) {
+        if (counter == lengthOfArray) {
             increaseArrayLength();
         }
-        db[counter] = item;
+        elementsCollector[counter] = element;
         counter++;
     }
 
     @Override
-    public void add(int index, String item) {
+    public void add(int index, String element) {
         if (index < counter) {
-            if (counter == length) {
+            if (counter == lengthOfArray) {
                 increaseArrayLength();
             }
-            implementAdd(index, item);
+            implementAdd(index, element);
             counter++;
         }
 
@@ -35,13 +39,13 @@ public class ArrayList implements List {
 
     @Override
     public String get(int index) {
-        return db[index];
+        return elementsCollector[index];
     }
 
     @Override
-    public void remove(String item) {
-        for (int i = 0; i < length - 1; i++) {
-            if (item.equals(db[i])) {
+    public void remove(String element) {
+        for (int i = 0; i < lengthOfArray - 1; i++) {
+            if (element.equals(elementsCollector[i])) {
                 implementRemoval(i);
             }
         }
@@ -49,7 +53,7 @@ public class ArrayList implements List {
 
     @Override
     public void remove(int index) {
-        for (int i = 0; i < length - 1; i++) {
+        for (int i = 0; i < lengthOfArray - 1; i++) {
             if (i == index) {
                 implementRemoval(i);
             }
@@ -63,35 +67,35 @@ public class ArrayList implements List {
     }
 
     private void increaseArrayLength() {
-        length = length * 2;
-        String[] db2 = new String[length];
+        lengthOfArray = lengthOfArray * 2;
+        String[] array2 = new String[lengthOfArray];
         for (int i = 0; i < counter; i++) {
-            db2[i] = db[i];
+            array2[i] = elementsCollector[i];
         }
-        db = db2;
+        elementsCollector = array2;
     }
 
     public void implementAdd(int index, String item) {
-        String[] db1 = new String[length + 1];
+        String[] array1 = new String[lengthOfArray + 1];
         int loop = 0;
         int new_length = 0;
-        while (loop < db1.length) {
+        while (loop <array1.length) {
             if (loop == index) {
-                db1[loop] = item;
+                array1[loop] = item;
             } else {
-                db1[loop] = db[new_length];
+                array1[loop] = elementsCollector[new_length];
                 new_length++;
             }
             loop++;
         }
-        db = db1;
+        elementsCollector = array1;
     }
 
     public void implementRemoval(int i) {
-        db[i] = null;
+        elementsCollector[i] = null;
         counter--;
-        for (int j = i; j < length - 1; j++) {
-            db[j] = db[j + 1];
+        for (int j = i; j < lengthOfArray - 1; j++) {
+            elementsCollector[j] = elementsCollector[j + 1];
         }
     }
 }
