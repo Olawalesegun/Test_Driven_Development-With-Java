@@ -1,2 +1,4 @@
-package reflection;public class Amphibians {
+package reflection;
+
+public class Amphibians extends Vertebrate{
 }
