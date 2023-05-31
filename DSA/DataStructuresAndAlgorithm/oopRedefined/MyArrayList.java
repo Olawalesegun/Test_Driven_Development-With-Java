@@ -56,12 +56,13 @@ public class MyArrayList {
         int counter = 0;
         for (int count = 0; count < array.length; count++) {
             if (count != index) {
-                newArray[counter] = array[counter];
+                newArray[counter] = this.array[counter];
             }
             counter++;
         }
-        System.out.println(newArray);
+        System.out.println(Arrays.toString(newArray));
         return Arrays.toString(newArray);
+
     }
 }
         /*Object[] newArray = new Object[0];
