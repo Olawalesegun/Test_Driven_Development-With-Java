@@ -3,8 +3,7 @@ package oopRedefined;
 import DataStructuresAndAlgorithm.oopRedefined.MyArrayList;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class MyArrayListTest {
     MyArrayList arrayList = new MyArrayList();
@@ -49,10 +48,19 @@ class MyArrayListTest {
         assertEquals(2, arrayList.size());
     }
     @Test
+    public void testThatICanRemoveAnElementInAnArrayList1(){
+        arrayList.add(9);
+        arrayList.add(4);
+        arrayList.remove(1);
+        Object collectSize = arrayList.getNewSize();
+        assertEquals(9, collectSize);
+    }
+    @Test
     public void testThatICanRemoveAnElementInAnArrayList(){
         arrayList.add(9);
         arrayList.add(4);
-        assertEquals("[9]", arrayList.remove(1));
+        arrayList.remove(1);
+        assertEquals(9, arrayList.getElementsOfNewArray());
     }
     @Test
     public void testThatICanRemoveMoreThanOneElementInAnArrayList(){
@@ -60,11 +68,16 @@ class MyArrayListTest {
         arrayList.add("Sam");
         arrayList.add("Immanuel");
         arrayList.add("Semicolon");
+        arrayList.remove(1);
         Object[] arr = {"Chief","Immanuel", "Semicolon"};
-        assertEquals(arr, arrayList.remove(1));
+       assertEquals(arr, arrayList.getElementsOfNewArray());
     }
 
-
+    @Test
+    public void testThatIcanSetElementsOfAnArrayThroughItsIndex(){
+        arrayList.set(0, 1);
+        assertEquals(1, arrayList.getElementsOfNewArray());
+    }
 
 
 }
