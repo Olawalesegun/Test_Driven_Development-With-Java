@@ -8,7 +8,7 @@ public class MyArrayList {
     private Object[] array = new Object[sizeOfArray];
     private int sizeOfOldArray = array.length;
     private int counter;
-    private Object[] newArray; //= new Object[array.length - 1];
+    private Object[] newArray = new Object[array.length - 1];
 
     public boolean isEmpty(){
         return counter == 0;
@@ -53,18 +53,26 @@ public class MyArrayList {
         return array[index];
     }
 
+    public Object getNewSize(){
+        if (newArray != null) {
+            return newArray.length;
+        } else {
+            return 0;
+        }
+    }
+
     public void remove(int index){
         if(index >= 0 && index<sizeOfOldArray-1){
-            newArray = new Object[array.length - 1];
+            Object[] modifiedArray = new Object[array.length - 1];
             counter = 0;
             //newSize = array.length
             for(int count = 0; count<array.length-1; count++){
                 if(index != count){
-                    newArray[counter] = array[count];
+                    modifiedArray[counter] = array[count];
                     counter++;
                 }
-
             }
+            newArray = modifiedArray;
         }
     }
     public String getElementsOfNewArray(){
