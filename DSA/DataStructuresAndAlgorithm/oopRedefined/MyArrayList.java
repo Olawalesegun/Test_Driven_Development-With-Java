@@ -6,7 +6,9 @@ public class MyArrayList {
 
     private int sizeOfArray = 1;
     private Object[] array = new Object[sizeOfArray];
+    private int sizeOfOldArray = array.length;
     private int counter;
+    private Object[] newArray; //= new Object[array.length - 1];
 
     public boolean isEmpty(){
         return counter == 0;
@@ -51,19 +53,58 @@ public class MyArrayList {
         return array[index];
     }
 
-    public String remove(int index) {
-        Object newArray[] = new Object[array.length - 1];
-        int counter = 0;
-        for (int count = 0; count < array.length; count++) {
-            if (count != index) {
-                newArray[counter] = this.array[counter];
-            }
-            counter++;
-        }
-        System.out.println(Arrays.toString(newArray));
-        return Arrays.toString(newArray);
+    public void remove(int index){
+        if(index >= 0 && index<sizeOfOldArray-1){
+            newArray = new Object[array.length - 1];
+            counter = 0;
+            //newSize = array.length
+            for(int count = 0; count<array.length-1; count++){
+                if(index != count){
+                    newArray[counter] = array[count];
+                    counter++;
+                }
 
+            }
+        }
     }
+    public String getElementsOfNewArray(){
+        return Arrays.toString(newArray);
+        //return Arrays.copyOf(newArray, newArray.length);
+        //return newArray;
+    }
+
+    public void set(int index, Object element) {
+        newArray = new Object[array.length - 1];
+        if (index >= 0 && index < sizeOfOldArray - 1) {
+            newArray[index] = element;
+        }
+    }
+    public void clear(){
+         newArray = new Object[0];
+    }
+    public int indexOf(Object element) {
+        int indexNumber = 0;
+        for (int count = 0; count < array.length; count++) {
+            if (array[count] == element) {
+                indexNumber = count;
+            }
+
+        }
+        return indexNumber;
+    }
+
+    /*public void remove(int index) {
+        Object newArray[] = new Object[array.length - 1];
+        if(index >=0 && index<array.length - 1){
+            int counter = 0;
+            for (int count = 0; count < array.length; count++) {
+                if (count != index) {
+                    newArray[counter] = array[count];
+                }
+                counter++;
+            }
+        }
+    }*/
 }
         /*Object[] newArray = new Object[0];
         if (index >= 0 && index < array.length - 1) {
