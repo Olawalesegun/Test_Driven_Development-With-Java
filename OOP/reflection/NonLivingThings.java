@@ -1,2 +1,5 @@
-package reflection;public class NonLivingThings {
+package reflection;
+
+public class NonLivingThings extends Things{
+
 }
