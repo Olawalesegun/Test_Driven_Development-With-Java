@@ -1,6 +1,6 @@
 package timbuchalka;
 
-public class Account {
+public class Account2 {
 
     private String phoneNumber;
     private String email;
@@ -23,10 +23,14 @@ public class Account {
     public String getAccountNumber() {
         return accountNumber;
     }
+    public void setBalanceToAccountBalance(String accountNumber){
+        double balance = 0;
+        if (accountNumber.equals(this.accountNumber)) balance = accountBalance;
+    }
 
     public double checkAccountBalance(String accountNumber) {
         double balance = 0;
-        if (accountNumber.equals(this.accountNumber)) balance = accountBalance;
+        setBalanceToAccountBalance(accountNumber);
         return balance;
     }
 }
