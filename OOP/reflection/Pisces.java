@@ -1,2 +1,4 @@
-package reflection;public class Pisces {
+package reflection;
+
+public class Pisces extends Vertebrate{
 }
