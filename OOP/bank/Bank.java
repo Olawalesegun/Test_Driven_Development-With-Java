@@ -1,7 +1,7 @@
 package bank;
 import java.security.SecureRandom;
 
-public class Bank implements Acc {
+public class Bank {
     private String bankAccName;
     private String bankAccEmail;
     private boolean confirmIfBankAccNameAndBankEmailIsProvided;
@@ -17,6 +17,7 @@ public class Bank implements Acc {
         this.bankAccEmail = bankAccEmail;
         this.accNumber = getAccNumber();
     }
+
     public String getBankAccName(){
         return bankAccName;
     }
@@ -24,6 +25,7 @@ public class Bank implements Acc {
         return bankAccEmail;
     }
     public String getAccNumber(){
+        createBankAccountNumber();
         return accNumber;
     }
     private void createBankAccountNumber(){
@@ -39,10 +41,10 @@ public class Bank implements Acc {
                 stringCollector.append(collector);
             }
             accNumber = stringCollector.toString();
-            this.accNumber = accNumber;
 
         }
     }
 
-
+    public void deposit(String accNo, int i) {
+    }
 }
