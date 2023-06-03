@@ -23,8 +23,7 @@ public class MyArrayList {
     }
 
     public Object size() {
-        //return counter;
-        return array.length;
+        return counter;
     }
 
     public void add(int index, Object element) {
