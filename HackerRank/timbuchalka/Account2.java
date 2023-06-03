@@ -8,7 +8,7 @@ public class Account2 {
     private double accountBalance;
     private String accountNumber;
 
-    public Account(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber) {
+    public Account2(String accountNumber, double accountBalance, String customerName, String email, String phoneNumber) {
         this.accountNumber = accountNumber;
         this.accountBalance = accountBalance;
         this.customerName = customerName;
