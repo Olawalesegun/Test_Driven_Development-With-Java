@@ -36,11 +36,10 @@ class AccountTest {
         assertEquals(-0, acc.checkBalance("00000"));
     }
     @Test
-    public void testToWithDrawNewMoneyFromNewAccountThatHasntBeenCreditedYet(){
+    public void testToWithDrawMoneyFromNewAccountThatHasntBeenCreditedYet(){
         acc.withdraw(5000);
         assertEquals(0, acc.checkBalance("00000"));
     }
-
     @Test
     public void testThatICanWithDrawAfterIHadDepositedIntoMyNewAccount(){
         acc.deposit(3000);
