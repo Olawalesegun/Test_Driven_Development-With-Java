@@ -12,8 +12,8 @@ class AccountTest {
         assertNotNull(acc);
     }
     @Test
-    public void testThatAccountIsEmptyWithNoMoneyInIt(){
-        assertEquals(5000, acc.checkBalance("00000"));
+    public void testThatAccountIsEmptyWithNoMoneyInItUponCreation(){
+        assertEquals(0, acc.checkBalance("00000"));
     }
     @Test
     public void testThatAccountCanDeposit(){
@@ -48,11 +48,11 @@ class AccountTest {
         assertEquals(1000, acc.checkBalance("00000"));
     }
     @Test
-    public void testThatMyAccpountCanWithStadAnyFormOfComplexTransaction(){
+    public void testThatMyAccountCanWithstandAnyFormOfComplexTransaction(){
         acc.deposit(8000);
         acc.withdraw(4000);
         acc.withdraw(435);
         acc.withdraw(18);
-        assertEquals(3423, acc.checkBalance("00000"));
+        assertEquals(3547, acc.checkBalance("00000"));
     }
 }
