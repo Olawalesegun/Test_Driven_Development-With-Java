@@ -37,21 +37,21 @@ class AccountTest {
     }
     @Test
     public void testToWithDrawMoneyFromNewAccountThatHasntBeenCreditedYet(){
-        acc.withdraw(5000);
+        acc.withdraw("00000",5000);
         assertEquals(0, acc.checkBalance("00000"));
     }
     @Test
     public void testThatICanWithDrawAfterIHadDepositedIntoMyNewAccount(){
         acc.deposit(3000);
-        acc.withdraw(2000);
+        acc.withdraw("00000",2000);
         assertEquals(1000, acc.checkBalance("00000"));
     }
     @Test
     public void testThatMyAccountCanWithstandAnyFormOfComplexTransaction(){
         acc.deposit(8000);
-        acc.withdraw(4000);
-        acc.withdraw(435);
-        acc.withdraw(18);
+        acc.withdraw("00000",4000);
+        acc.withdraw("00000",435);
+        acc.withdraw("00000",18);
         assertEquals(3547, acc.checkBalance("00000"));
     }
 }
