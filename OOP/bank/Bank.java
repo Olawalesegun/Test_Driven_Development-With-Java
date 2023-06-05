@@ -32,10 +32,10 @@ public class Bank {
     public void withdraw(String accNo, double amount, String password){
         if(verifyAccountNumber(accNo) && verifyAmountIsValid(amount) &&verifyPassword(password)){
             for (Account acc : listOfAccountsPresentInBank){
-                    if (accNo.equals(acc.getAccountNumber()) && password.equals(acc.getAccountPassword())) {
-                        acc.withdraw(password, amount);
-                        break;
-                    }
+                if (accNo.equals(acc.getAccountNumber()) && password.equals(acc.getAccountPassword())) {
+                    acc.withdraw(password, amount);
+                    break;
+                }
             }
         }
     }
@@ -51,7 +51,6 @@ public class Bank {
             }
         }
     }
-
     private Account lookForAccountByTheAccountNumber(String receiversAccountNumber) {
         for(Account acc: listOfAccountsPresentInBank){
             if(acc.getAccountNumber().equals(receiversAccountNumber)){
@@ -60,7 +59,6 @@ public class Bank {
         }
         return null;
     }
-
     public boolean verifyPassword(String password){
         boolean isPasswordVerified = password.length() == 5;
         return isPasswordVerified;
