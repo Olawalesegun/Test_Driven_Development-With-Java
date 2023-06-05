@@ -15,7 +15,7 @@ public class Account {
         this.password = password;
         this.lastName = lastName;
     }
-    public void deposit(int amount) {
+    public void deposit(double amount) {
         if( validateDeposit(amount)) balance += amount;
     }
     public double checkBalance(String password) {
@@ -23,7 +23,7 @@ public class Account {
         if(verifyPassword(password)) bal = balance;
         return bal;
     }
-    public double withdraw(String password, int withdrawAmount) {
+    public double withdraw(String password, double withdrawAmount) {
         double giveBackValue = 0;
         if(validateWithdrawAmount(withdrawAmount) && verifyPassword(password)){
             balance -= withdrawAmount;
@@ -31,7 +31,13 @@ public class Account {
         }
         return giveBackValue;
     }
-    private boolean validateDeposit(int amount){
+    public String getAccountNumber(){
+        return ACCOUNT_NO;
+    }
+    public String getAccountPassword(){
+        return password;
+    }
+    private boolean validateDeposit(double amount){
         boolean output = false;
         if(amount >0) output = true;
         return output;
@@ -40,8 +46,28 @@ public class Account {
         boolean passwordVerification = this.password == password;
         return passwordVerification;
     }
-    public boolean validateWithdrawAmount(int amountToValidate){
+    public boolean validateWithdrawAmount(double amountToValidate){
         boolean validateResult = balance >= amountToValidate;
         return validateResult;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return mail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public double getBalance() {
+        return balance;
     }
 }
