@@ -21,7 +21,6 @@ public class MyArrayList {
         array[counter] = firstElementAddedIntoArray;
         counter++;
     }
-
     public Object size() {
         return counter;
     }
