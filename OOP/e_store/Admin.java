@@ -1,4 +1,4 @@
-package oop_snack;
+package e_store;
 
 public class Admin extends Users {
     public Admin(String name, String emailAddress, int age, String password, String phoneNumber){
