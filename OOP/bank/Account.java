@@ -1,6 +1,7 @@
 package bank;
 
 public class Account {
+    private final String phoneNo;
     private String firstName;
     private String lastName;
     private double balance;
@@ -8,12 +9,13 @@ public class Account {
     private final String mail;
     private String password;
 
-    public Account(String accNo, String firstName, String lastName, String mail, String password) {
+    public Account(String accNo, String firstName, String lastName, String phoneNo, String mail, String password) {
         ACCOUNT_NO = accNo;
         this.firstName = firstName;
         this.mail = mail;
         this.password = password;
         this.lastName = lastName;
+        this.phoneNo = phoneNo;
     }
     public void deposit(double amount) {
         if( validateDeposit(amount)) balance += amount;
