@@ -1,4 +1,4 @@
-package oop_snack;
+package e_store;
 
 public class Users {
     protected int age;
