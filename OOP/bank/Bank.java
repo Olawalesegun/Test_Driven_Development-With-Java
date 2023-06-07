@@ -6,12 +6,14 @@ public class Bank {
     private final String nameOfBank;
     private int countAndIncrementUponCreationOfAccount;
     private ArrayList<Account> listOfAccountsPresentInBank;
+    private Account newAccCreated;
     public Bank(String nameOfBank){
         this.nameOfBank = nameOfBank;
         listOfAccountsPresentInBank = new ArrayList<>();
     }
     public Account registerNewCustomer(String firstName, String lastName, String email, String password){
-        Account newAccCreated = null;
+
+        // Account newAccCreated = null;
         if(validateRegistrationDetails(firstName, lastName, email, password)){
             String accountNumber = 100000000 + countAndIncrementUponCreationOfAccount + "";
             newAccCreated = new Account(accountNumber,firstName, lastName, email, password);
@@ -24,7 +26,7 @@ public class Bank {
         if(verifyAccountNumber(accNo) && verifyAmountIsValid(amount)) {
             for (Account acc : listOfAccountsPresentInBank) {
                 if (accNo.equals(acc.getAccountNumber())) {
-                    acc.deposit(amount);
+                   acc.deposit(amount);
                 }
             }
         }
@@ -79,5 +81,9 @@ public class Bank {
         boolean isValidated = false;
         if(verifyFirstName && verifyLastName && verifyMail && verifyPassword) isValidated = true;
         return isValidated;
+    }
+
+    public String getFirstName() {
+        return fir
     }
 }
