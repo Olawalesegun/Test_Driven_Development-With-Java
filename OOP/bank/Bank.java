@@ -11,16 +11,23 @@ public class Bank {
         this.nameOfBank = nameOfBank;
         listOfAccountsPresentInBank = new ArrayList<>();
     }
-    public Account registerNewCustomer(String firstName, String lastName, String email, String password){
-
+    public Account registerNewCustomer(String firstName, String lastName, String phoneNo, String email, String password){
         // Account newAccCreated = null;
         if(validateRegistrationDetails(firstName, lastName, email, password)){
-            String accountNumber = 100000000 + countAndIncrementUponCreationOfAccount + "";
-            newAccCreated = new Account(accountNumber,firstName, lastName, email, password);
+            //String accountNumber = 100000000 + countAndIncrementUponCreationOfAccount + "";
+            String accountNumber = createAccountNumber(phoneNo);
+            newAccCreated = new Account(accountNumber,firstName, lastName, phoneNo, email, password);
             listOfAccountsPresentInBank.add(countAndIncrementUponCreationOfAccount, newAccCreated);
             countAndIncrementUponCreationOfAccount++;
         }
         return newAccCreated;
+    }
+    private String createAccountNumber(String phoneNumber){
+        String accNo = " ";
+        if(phoneNumber.startsWith("0")){
+            accNo = phoneNumber.substring(1);
+        }
+        return accNo;
     }
     public void deposit(String accNo, double amount){
         if(verifyAccountNumber(accNo) && verifyAmountIsValid(amount)) {
@@ -83,7 +90,8 @@ public class Bank {
         return isValidated;
     }
 
-    public String getFirstName() {
-        return fir
+    public String getDetails() {
+        return "Details for " + newAccCreated.getAccountNumber() + "are " + "" +newAccCreated.getFirstName() +
+                " " + newAccCreated.getLastName();
     }
 }
