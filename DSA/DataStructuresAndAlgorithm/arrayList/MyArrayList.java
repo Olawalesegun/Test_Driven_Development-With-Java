@@ -1,4 +1,4 @@
-package DataStructuresAndAlgorithm.oopRedefined;
+package DataStructuresAndAlgorithm.arrayList;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ public class MyArrayList {
     private Object[] array = new Object[sizeOfArray];
     private int sizeOfOldArray = array.length;
     private int counter;
-    private Object[] newArray = new Object[array.length - 1];
+    private Object[] newArray ;//= new Object[array.length - 1];
 
     public boolean isEmpty(){
         return counter == 0;
@@ -60,23 +60,26 @@ public class MyArrayList {
     }
 
     public void remove(int index){
-        if(index >= 0 && index<sizeOfOldArray-1){
-            Object[] modifiedArray = new Object[array.length - 1];
+        Object[] modifiedArray;
+        if(index >= 0 && index < sizeOfOldArray){
+            modifiedArray = new Object[array.length - 1];
             counter = 0;
             //newSize = array.length
             for(int count = 0; count<array.length-1; count++){
-                if(index != count){
-                    modifiedArray[counter] = array[count];
-                    counter++;
+                if(count != index){
+                    modifiedArray[count] = array[count];
+                    //counter++;
                 }
             }
             newArray = modifiedArray;
+          //  counter--;
+          //  sizeOfArray--;
         }
     }
     public String getElementsOfNewArray(){
+        newArray = Arrays.copyOf(array, array.length);
+       // return Arrays.copyOf(array, array.length);
         return Arrays.toString(newArray);
-        //return Arrays.copyOf(newArray, newArray.length);
-        //return newArray;
     }
 
     public void set(int index, Object element) {
