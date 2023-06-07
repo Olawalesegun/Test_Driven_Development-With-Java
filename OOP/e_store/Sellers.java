@@ -1,4 +1,4 @@
-package oop_snack;
+package e_store;
 
 public class Sellers extends Users{
     public Sellers(String name,int age, String emailAddress, String password, String phoneNumber){
