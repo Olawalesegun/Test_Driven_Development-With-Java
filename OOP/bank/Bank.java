@@ -13,10 +13,10 @@ public class Bank {
     }
     public Account registerNewCustomer(String firstName, String lastName, String phoneNo, String email, String password){
         // Account newAccCreated = null;
-        if(validateRegistrationDetails(firstName, lastName, email, password)){
+        if(validateRegistrationDetails(firstName, lastName, phoneNo, email, password)){
             //String accountNumber = 100000000 + countAndIncrementUponCreationOfAccount + "";
             String accountNumber = createAccountNumber(phoneNo);
-            newAccCreated = new Account(accountNumber,firstName, lastName, phoneNo, email, password);
+            newAccCreated = new Account(accountNumber, firstName, lastName, phoneNo, email, password);
             listOfAccountsPresentInBank.add(countAndIncrementUponCreationOfAccount, newAccCreated);
             countAndIncrementUponCreationOfAccount++;
         }
@@ -55,10 +55,19 @@ public class Bank {
             Account receiverAccountRecord = lookForAccountByTheAccountNumber(receiversAccountNumber);
             if(senderAccountRecord != null && receiverAccountRecord != null &&
                     senderAccountRecord.getAccountPassword().equals(password)){
-                senderAccountRecord.withdraw(password, amount);
-                receiverAccountRecord.deposit(amount);
+                if(senderAccountRecord.getBalance() >= amount){
+                    senderAccountRecord.withdraw(password, amount);
+                    receiverAccountRecord.deposit(amount);
+                }
+                /*else{
+                    getAccountBalance() ==
+                }*/
+
             }
         }
+    }
+    public double getAccountBalance(){
+        return newAccCreated.getBalance();
     }
     private Account lookForAccountByTheAccountNumber(String receiversAccountNumber) {
         for(Account acc: listOfAccountsPresentInBank){
@@ -80,18 +89,22 @@ public class Bank {
         boolean isAccLengthTheRequiredLength = accNo.length() == 10;
         return isAccLengthTheRequiredLength;
     }
-    public boolean validateRegistrationDetails(String firstName, String lastName, String email, String password){
+    public boolean validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
         boolean verifyFirstName = firstName.length() > 2;
         boolean verifyLastName = lastName.length() > 2;
+        boolean verifyPhoneNo = phoneNo.length() == 11;
         boolean verifyMail = email.length() > 2;
         boolean verifyPassword = password.length() > 2;
         boolean isValidated = false;
-        if(verifyFirstName && verifyLastName && verifyMail && verifyPassword) isValidated = true;
+        if(verifyFirstName && verifyLastName && verifyPhoneNo && verifyMail && verifyPassword) isValidated = true;
         return isValidated;
     }
 
     public String getDetails() {
         return "Details for " + newAccCreated.getAccountNumber() + "are " + "" +newAccCreated.getFirstName() +
                 " " + newAccCreated.getLastName();
+    }
+    public String getAccNumber(){
+        return newAccCreated.getAccountNumber();
     }
 }
