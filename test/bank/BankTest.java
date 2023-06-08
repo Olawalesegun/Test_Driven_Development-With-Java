@@ -5,76 +5,96 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class BankTest {
     private Bank bank;
 
     @BeforeEach
     public void setUp() {
+
         bank = new Bank("MyBank");
+        bank.registerNewCustomer("Segun", "Olawale", "09010000000", "olaseg@gmail.com", "00001");
     }
-
     @Test
-    public void testRegisterNewCustomer() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        Assertions.assertNotNull(account);
-        assertEquals("Kunle Remi", account.getFirstName());
-        assertEquals("Dauda", account.getLastName());
-        assertEquals("kunlerem@inc.com", account.getEmail());
-        assertEquals("00001", account.getPassword());
+    public void testThatBankRecordsIsntEmpty(){
+        assertNotNull(bank);
     }
-
+    @Test
+    public void testToConfirmNameRegisterForNewCustomerIsWhatIsReturnedInBankRecords() {
+        assertEquals("Segun Olawale", bank.getDetails());
+    }
     @Test
     public void testDeposit() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.deposit(account.getAccountNumber(), 100.0);
-        assertEquals(100.0, account.getBalance());
+        bank.deposit(bank.getAccNumber(), 100.0);
+        assertEquals(100.0, bank.getAccountBalance());
     }
-
     @Test
-    public void testWithdraw() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.deposit(account.getAccountNumber(), 100.0);
-        bank.withdraw(account.getAccountNumber(), 50.0, "password");
-        assertEquals(50.0, account.getBalance(), 0.01);
+    public void testToWithdrawWithTheRightPasswordORPin() {
+        bank.deposit(bank.getAccNumber(), 100.0);
+        bank.withdraw(bank.getAccNumber(), 80.0, "00001");
+        assertEquals(20.0, bank.getAccountBalance(), 0.01);
     }
-
     @Test
-    public void testTransfer() {
-        Account senderAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        Account receiverAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
+    public void testToDepositIntoANonExistingAccountNumber(){
+        bank.deposit("9176543212", 400);
+        assertEquals(0.0, bank.getAccountBalance());
+    }
+    @Test
+    public void testToWithDrawWithAWrongAccountPasswordWhileHavingAnExistingAccountNumber(){
+        String bankAccountNumber = "9010000000";
+        bank.deposit(bankAccountNumber, 1000);
+        bank.withdraw(bankAccountNumber, 400, "00000");
+        assertEquals(1000, bank.getAccountBalance());
+    }
+    @Test
+    public void testThatToWithdrawWithRightPasswordOrPinAndAnExistingAccountNumberWorks(){
+        bank.deposit("9010000000", 500);
+        bank.withdraw("9010000000", 150, "00001");
+        assertEquals(350, bank.getAccountBalance());
+    }
+    @Test
+    public void testThatICanTransferToAnExistingAccountNumber(){
+        bank.registerNewCustomer("Chukwuemeka",
+                "Chibuzor",
+                "08020000000",
+                "chukschi@ng.com",
+                "9876");
+        bank.deposit("8020000000", 500);
+        bank.transfer("8020000000", "9010000000", 200, "9876");
+        assertEquals(100, bank.getAccountBalance());
+    }
+    //@Test
+  /*  public void testTransfer() {
+       // Account senderAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
+      //  Account receiverAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
         bank.deposit(senderAccount.getAccountNumber(), 100.0);
         bank.transfer(senderAccount.getAccountNumber(), receiverAccount.getAccountNumber(), 50.0, "00001");
         assertEquals(50.0, senderAccount.getBalance(), 0.01);
         assertEquals(50.0, receiverAccount.getBalance(), 0.01);
-    }
+    }*/
     @Test
     public void testInvalidAccountNumber() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.deposit("1234567890", 100.0); // Invalid account number
-        assertEquals(0.0, account.getBalance());
+        //Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
+        bank.deposit("9010000000", 100.0);
+        assertEquals(0.0, bank.getAccountBalance());
     }
-
     @Test
     public void testInvalidAmount() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.deposit(account.getAccountNumber(), -50.0); // Negative amount
-        assertEquals(0.0, account.getBalance());
+        bank.deposit(bank.getAccNumber(), -50.0);
+        assertEquals(0.0, bank.getAccountBalance());
     }
-
     @Test
     public void testInvalidPassword() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.deposit(account.getAccountNumber(), 100.0);
-        bank.withdraw(account.getAccountNumber(), 50.0, "0001");
-        assertEquals(100.0, account.getBalance());
+        bank.deposit(bank.getAccNumber(), 100.0);
+        bank.withdraw(bank.getAccNumber(), 50.0, "0001");
+        assertEquals(100.0, bank.getAccountBalance());
     }
-
     @Test
     public void testAccountNotFound() {
-        Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
-        bank.withdraw("1234567890", 50.0, "0000100"); // Account not found
-        assertEquals(0.0, account.getBalance(), 0.01);
+        //Account account = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
+        bank.withdraw("1234567890", 50.0, "0000100");
+        assertEquals(0.0, bank.getAccountBalance(), 0.01);
     }
 }
 
