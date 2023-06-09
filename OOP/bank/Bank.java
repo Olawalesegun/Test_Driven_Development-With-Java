@@ -108,8 +108,8 @@ public class Bank {
         boolean isAccLengthTheRequiredLength = accNo.length() == 10;
         return isAccLengthTheRequiredLength;
     }
-    public void validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
-       try{
+    public boolean validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
+      /* try{
            validateFirstName(firstName);
            validateLastName(lastName);
            validatePhoneNo(phoneNo);
@@ -117,16 +117,16 @@ public class Bank {
            validatePassword(password);
        }catch (IllegalArgumentException e) {
            System.out.println(e.getMessage());
-       }
+       }*/
 
-        /* boolean verifyFirstName = firstName.length() > 2;
+        boolean verifyFirstName = firstName.length() > 2;
         boolean verifyLastName = lastName.length() > 2;
         boolean verifyPhoneNo = phoneNo.length() == 11;
         boolean verifyMail = email.length() > 2;
         boolean verifyPassword = password.length() > 2;
         boolean isValidated = false;
         if(verifyFirstName && verifyLastName && verifyPhoneNo && verifyMail && verifyPassword) isValidated = true;
-        return isValidated;*/
+        return isValidated;
 
        /* try {
             if (firstName.length() < 3) {
@@ -148,7 +148,7 @@ public class Bank {
             System.out.println(e.getMessage());
         }*/
     }
-    public void validateFirstName(String firstName){
+   /* public void validateFirstName(String firstName){
         if(firstName.length() < 3){
             throw new IllegalArgumentException("Hello Friend!! Your First name must be at least 3 characters in terms of length");
         }
@@ -172,7 +172,7 @@ public class Bank {
         if (password.length() < 5) {
             throw new IllegalArgumentException("Password must be at least 5 characters long");
         }
-    }
+    }*/
 
     public String getDetails() {
         return "Details for " + newAccCreated.getAccountNumber() + "are " + "" +newAccCreated.getFirstName() +
