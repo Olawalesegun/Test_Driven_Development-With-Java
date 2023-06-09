@@ -25,7 +25,7 @@ public class Bank {
             countAndIncrementUponCreationOfAccount++;
         }
         else{
-            System.out.println("Take Life Seriously and Input the right details as you shou should, stop wasting both of our time");
+            System.out.println("Trying to break my code. Really!!\nKindly input the right detail to Register please!!");
             System.exit(0);
         }
         return newAccCreated;
@@ -109,7 +109,45 @@ public class Bank {
         return isAccLengthTheRequiredLength;
     }
     public boolean validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
-      /* try{
+        boolean verifyFirstName = firstName.length() > 2;
+        boolean verifyLastName = lastName.length() > 2;
+        if (!verifyPhoneNumber(phoneNo)) {
+            throw new IllegalArgumentException("Invalid phone number");
+        }
+        boolean verifyMail = email.length() > 2;
+        boolean verifyPassword = password.length() > 2;
+        boolean isValidated = false;
+        if(verifyFirstName && verifyLastName && verifyPhoneNumber(phoneNo) && verifyMail && verifyPassword) isValidated = true;
+        return isValidated;
+    }
+
+    private boolean verifyPhoneNumber(String phoneNumber) {
+        String pattern = "^\\d{11}$";
+        return phoneNumber.matches(pattern);
+    }
+    public String getDetails() {
+        return "Details for " + newAccCreated.getAccountNumber() + " are " + "" +newAccCreated.getFirstName() +
+                " " + newAccCreated.getLastName();
+    }
+    public String getAccNumber(){
+        return newAccCreated.getAccountNumber();
+    }
+    public String getEmail(){
+       try{
+            boolean b = newAccCreated.getEmail() != null;
+            newAccCreated.getEmail();
+        } catch(NullPointerException e){
+            System.out.println("My Friend, You do not have an Account with us, Please Register");
+        }
+       return " ";
+       // return newAccCreated.getEmail();
+    }
+    public String getPassword(){
+        return newAccCreated.getPassword();
+    }
+   /* public void validateReg(){
+
+         *//* try{
            validateFirstName(firstName);
            validateLastName(lastName);
            validatePhoneNo(phoneNo);
@@ -117,18 +155,9 @@ public class Bank {
            validatePassword(password);
        }catch (IllegalArgumentException e) {
            System.out.println(e.getMessage());
-       }*/
+       }*//*
 
-        boolean verifyFirstName = firstName.length() > 2;
-        boolean verifyLastName = lastName.length() > 2;
-        boolean verifyPhoneNo = phoneNo.length() == 11;
-        boolean verifyMail = email.length() > 2;
-        boolean verifyPassword = password.length() > 2;
-        boolean isValidated = false;
-        if(verifyFirstName && verifyLastName && verifyPhoneNo && verifyMail && verifyPassword) isValidated = true;
-        return isValidated;
-
-       /* try {
+         *//* try {
             if (firstName.length() < 3) {
                 throw new IllegalArgumentException("First name must be at least 3 characters long");
             }
@@ -146,9 +175,10 @@ public class Bank {
             }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
-        }*/
-    }
-   /* public void validateFirstName(String firstName){
+        }*//*
+    }*/
+
+    /* public void validateFirstName(String firstName){
         if(firstName.length() < 3){
             throw new IllegalArgumentException("Hello Friend!! Your First name must be at least 3 characters in terms of length");
         }
@@ -173,25 +203,4 @@ public class Bank {
             throw new IllegalArgumentException("Password must be at least 5 characters long");
         }
     }*/
-
-    public String getDetails() {
-        return "Details for " + newAccCreated.getAccountNumber() + "are " + "" +newAccCreated.getFirstName() +
-                " " + newAccCreated.getLastName();
-    }
-    public String getAccNumber(){
-        return newAccCreated.getAccountNumber();
-    }
-    public String getEmail(){
-       try{
-            boolean b = newAccCreated.getEmail() != null;
-            newAccCreated.getEmail();
-        } catch(NullPointerException e){
-            System.out.println("My Friend, You do not have an Account with us, Please Register");
-        }
-       return " ";
-       // return newAccCreated.getEmail();
-    }
-    public String getPassword(){
-        return newAccCreated.getPassword();
-    }
 }
