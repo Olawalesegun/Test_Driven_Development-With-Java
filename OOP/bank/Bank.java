@@ -1,5 +1,6 @@
 package bank;
 
+import javax.security.auth.login.AccountNotFoundException;
 import java.util.ArrayList;
 
 public class Bank {
@@ -17,8 +18,15 @@ public class Bank {
             //String accountNumber = 100000000 + countAndIncrementUponCreationOfAccount + "";
             String accountNumber = createAccountNumber(phoneNo);
             newAccCreated = new Account(accountNumber, firstName, lastName, phoneNo, email, password);
+            newAccCreated.setPassword(password);
+            newAccCreated.setMail(email);
             listOfAccountsPresentInBank.add(countAndIncrementUponCreationOfAccount, newAccCreated);
+            System.out.println("You have successfully registered your account with our bank");
             countAndIncrementUponCreationOfAccount++;
+        }
+        else{
+            System.out.println("Take Life Seriously and Input the right details as you shou should, stop wasting both of our time");
+            System.exit(0);
         }
         return newAccCreated;
     }
@@ -48,22 +56,33 @@ public class Bank {
             }
         }
     }
-    public void transfer(String sendersAccountNo, String receiversAccountNumber, double amount, String password){
+    public void transfer(String sendersAccountNo, String receiversAccountNumber, double amount, String password) throws AccountNotFoundException {
         if(verifyAccountNumber(sendersAccountNo) && verifyAccountNumber(receiversAccountNumber) &&
                 verifyAmountIsValid(amount) && verifyPassword(password)){
             Account senderAccountRecord = lookForAccountByTheAccountNumber(sendersAccountNo);
             Account receiverAccountRecord = lookForAccountByTheAccountNumber(receiversAccountNumber);
-            if(senderAccountRecord != null && receiverAccountRecord != null &&
+            if(senderAccountRecord == null || receiverAccountRecord == null){
+                throw new AccountNotFoundException("Account not found.");
+            }
+            if(!senderAccountRecord.getAccountPassword().equals(password)){
+                throw new IllegalArgumentException("Invalid password.");
+            }
+            if(senderAccountRecord.getBalance() < amount) {
+                System.out.println("Insufficient amount");
+            }
+            senderAccountRecord.withdraw(password, amount);
+            receiverAccountRecord.deposit(amount);
+            /*if(senderAccountRecord != null && receiverAccountRecord != null &&
                     senderAccountRecord.getAccountPassword().equals(password)){
                 if(senderAccountRecord.getBalance() >= amount){
                     senderAccountRecord.withdraw(password, amount);
                     receiverAccountRecord.deposit(amount);
                 }
-                /*else{
+                *//*else{
                     getAccountBalance() ==
-                }*/
+                }*//*
 
-            }
+            }*/
         }
     }
     public double getAccountBalance(){
@@ -89,15 +108,70 @@ public class Bank {
         boolean isAccLengthTheRequiredLength = accNo.length() == 10;
         return isAccLengthTheRequiredLength;
     }
-    public boolean validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
-        boolean verifyFirstName = firstName.length() > 2;
+    public void validateRegistrationDetails(String firstName, String lastName, String phoneNo, String email, String password){
+       try{
+           validateFirstName(firstName);
+           validateLastName(lastName);
+           validatePhoneNo(phoneNo);
+           validateEmail(email);
+           validatePassword(password);
+       }catch (IllegalArgumentException e) {
+           System.out.println(e.getMessage());
+       }
+
+        /* boolean verifyFirstName = firstName.length() > 2;
         boolean verifyLastName = lastName.length() > 2;
         boolean verifyPhoneNo = phoneNo.length() == 11;
         boolean verifyMail = email.length() > 2;
         boolean verifyPassword = password.length() > 2;
         boolean isValidated = false;
         if(verifyFirstName && verifyLastName && verifyPhoneNo && verifyMail && verifyPassword) isValidated = true;
-        return isValidated;
+        return isValidated;*/
+
+       /* try {
+            if (firstName.length() < 3) {
+                throw new IllegalArgumentException("First name must be at least 3 characters long");
+            }
+            if (lastName.length() < 3) {
+                throw new IllegalArgumentException("Last name must be at least 3 characters long");
+            }
+            if (!phoneNo.startsWith("0") || phoneNo.length() != 11) {
+                throw new IllegalArgumentException("Phone number must start with 0 and be 11 characters long");
+            }
+            if (!email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z]{2,6}$")) {
+                throw new IllegalArgumentException("Email must contain an @ and a .");
+            }
+            if (password.length() < 5) {
+                throw new IllegalArgumentException("Password must be at least 5 characters long");
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }*/
+    }
+    public void validateFirstName(String firstName){
+        if(firstName.length() < 3){
+            throw new IllegalArgumentException("Hello Friend!! Your First name must be at least 3 characters in terms of length");
+        }
+    }
+    public void validateLastName(String lastName){
+        if (lastName.length() < 3) {
+            throw new IllegalArgumentException("Last name must be at least 3 characters long");
+        }
+    }
+    public void validatePhoneNo(String phoneNo){
+        if (!phoneNo.startsWith("0") || phoneNo.length() != 11) {
+            throw new IllegalArgumentException("Phone number must start with 0 and be 11 characters long");
+        }
+    }
+    public void validateEmail(String email){
+        if (!email.matches("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z]{2,6}$")) {
+            throw new IllegalArgumentException("Email must contain an @ and a .");
+        }
+    }
+    public void validatePassword(String password){
+        if (password.length() < 5) {
+            throw new IllegalArgumentException("Password must be at least 5 characters long");
+        }
     }
 
     public String getDetails() {
@@ -106,5 +180,18 @@ public class Bank {
     }
     public String getAccNumber(){
         return newAccCreated.getAccountNumber();
+    }
+    public String getEmail(){
+       try{
+            boolean b = newAccCreated.getEmail() != null;
+            newAccCreated.getEmail();
+        } catch(NullPointerException e){
+            System.out.println("My Friend, You do not have an Account with us, Please Register");
+        }
+       return " ";
+       // return newAccCreated.getEmail();
+    }
+    public String getPassword(){
+        return newAccCreated.getPassword();
     }
 }
