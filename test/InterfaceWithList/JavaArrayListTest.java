@@ -2,8 +2,6 @@ package InterfaceWithList;
 
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 public class JavaArrayListTest {
