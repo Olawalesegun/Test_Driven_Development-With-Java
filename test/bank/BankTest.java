@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.security.auth.login.AccountNotFoundException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -22,7 +24,7 @@ public class BankTest {
     }
     @Test
     public void testToConfirmNameRegisterForNewCustomerIsWhatIsReturnedInBankRecords() {
-        assertEquals("Segun Olawale", bank.getDetails());
+        assertEquals("Details for 9010000000 are Segun Olawale", bank.getDetails());
     }
     @Test
     public void testDeposit() {
@@ -41,6 +43,11 @@ public class BankTest {
         assertEquals(0.0, bank.getAccountBalance());
     }
     @Test
+    public void testToDepositIntoAnExistingAccountNumber(){
+        bank.deposit("9010000000", 500);
+        assertEquals(500, bank.getAccountBalance());
+    }
+    @Test
     public void testToWithDrawWithAWrongAccountPasswordWhileHavingAnExistingAccountNumber(){
         String bankAccountNumber = "9010000000";
         bank.deposit(bankAccountNumber, 1000);
@@ -54,18 +61,19 @@ public class BankTest {
         assertEquals(350, bank.getAccountBalance());
     }
     @Test
-    public void testThatICanTransferToAnExistingAccountNumber(){
+    public void testThatICanTransferToAnExistingAccountNumber() throws AccountNotFoundException {
+
+        bank.deposit("9010000000", 500);
         bank.registerNewCustomer("Chukwuemeka",
                 "Chibuzor",
                 "08020000000",
                 "chukschi@ng.com",
                 "9876");
-        bank.deposit("8020000000", 500);
-        bank.transfer("8020000000", "9010000000", 200, "9876");
+       bank.transfer("9010000000", "8020000000", 200, "9876");
         assertEquals(100, bank.getAccountBalance());
     }
     //@Test
-  /*  public void testTransfer() {
+  /*  public void testThatTransferConnects() {
        // Account senderAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
       //  Account receiverAccount = bank.registerNewCustomer("Kunle Remi", "Dauda", "kunlerem@inc.com", "00001");
         bank.deposit(senderAccount.getAccountNumber(), 100.0);
