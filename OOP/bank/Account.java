@@ -6,7 +6,7 @@ public class Account {
     private String lastName;
     private double balance;
     private final String ACCOUNT_NO;
-    private final String mail;
+    private String mail;
     private String password;
 
     public Account(String accNo, String firstName, String lastName, String phoneNo, String mail, String password) {
@@ -16,6 +16,12 @@ public class Account {
         this.password = password;
         this.lastName = lastName;
         this.phoneNo = phoneNo;
+    }
+    public void setPassword(String password){
+        this.password = password;
+    }
+    public void setMail(String mail){
+        this.mail = mail;
     }
     public void deposit(double amount) {
         if( validateDeposit(amount)) balance += amount;
