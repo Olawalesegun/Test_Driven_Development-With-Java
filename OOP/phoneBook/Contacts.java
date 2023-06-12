@@ -33,7 +33,6 @@ public class Contacts {
         return phoneNo;
     }
 
-    @Test
     public String getDate() {
         return bDay;
     }
