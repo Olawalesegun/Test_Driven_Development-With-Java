@@ -17,9 +17,8 @@ public class Contacts {
         this.bDay = bDay;
     }
     public void updateFirstName(String firstName){
-
+        this.firstName = firstName;
     }
-
 
     public String getFirstName(){
         return firstName;
@@ -28,12 +27,15 @@ public class Contacts {
     public String getLastName() {
         return lastName;
     }
-
     public String getPhoneNo() {
         return phoneNo;
     }
 
     public String getDate() {
         return bDay;
+    }
+
+    public void updateLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
