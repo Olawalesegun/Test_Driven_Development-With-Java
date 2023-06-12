@@ -8,7 +8,6 @@ public class Contacts {
     private String bDay;
 
     public Contacts(){
-
     }
     public void createContact(String firstName, String lastName, String phoneNo, String email, String bDay){
         this.firstName = firstName;
@@ -24,5 +23,17 @@ public class Contacts {
 
     public String getFirstName(){
         return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public String getDate() {
+        return bDay;
     }
 }
