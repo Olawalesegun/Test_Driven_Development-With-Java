@@ -178,6 +178,5 @@ public class Main {
         print("Provide the amount you wish to deposit");
         double amountToBeDeposited = userInput.nextDouble();
         iNClusiveBank.deposit(accountNo, amountToBeDeposited);
-
     }
 }
