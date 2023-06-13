@@ -26,14 +26,15 @@ class PhoneBookTest {
     }
     @Test
     public void testThatICanCanCreateMoreThanOneContact(){
-        tecnoPhoneBook.createContact("Lamide", "Kelvin", "09053010203",
-                "lam@ir.com", "13-02-2009");
-        tecnoPhoneBook.createContact("Anjola", "Salsa", "07065432108",
-               "anj@kel.com", "12-01-1990");
-     String newElements = tecnoPhoneBook.displayContacts();
-         String[] arr = {"Lamide Kelvin 09053010203 09053010203 lam@ir.com, Anjola Salsa 07065432108 07065432108 anj@kel.com"};
-     assertEquals( Arrays.toString(arr) , newElements);
-
+        tecnoPhoneBook.createContact("Lamide", "Kelvin", "09053010203", "lam@ir.com", "13-02-2009");
+        tecnoPhoneBook.createContact("Anjola", "Salsa", "07065432108", "anj@kel.com", "12-01-1990");
+        String newElements = tecnoPhoneBook.displayContacts();
+        String[] arr = {"Lamide Kelvin 09053010203 09053010203 lam@ir.com, Anjola Salsa 07065432108 07065432108 anj@kel.com"};
+        assertEquals( Arrays.toString(arr) , newElements);
+    }
+    @Test
+    public void testThatICanCreateALotOfContacts(){
+        tecnoPhoneBook.createContact("Sam", "Immanuel", );
     }
 
 
