@@ -89,4 +89,38 @@ class PhoneBookTest {
         String result = "Lamide Kelvin 09053010203 lam@ir.com 13-02-2009";
         assertEquals(result, tecnoPhoneBook.searchContactFor("Lamide"));
     }
+
+    @Test
+    public void testThatAllContactsDisplayUponEntering(){
+        tecnoPhoneBook.createContact("Sam", "Immanuel", "09087456543",
+                "sam@im.com", "12-03-1989");
+        tecnoPhoneBook.createContact("Bola", "Ige",
+                "09034567893", "bola@ige.com", "12-03-1980");
+        tecnoPhoneBook.createContact("Jide", "Samson",
+                "0812345678", "jide@sam.com", "01-01-1970");
+        tecnoPhoneBook.createContact("Samuel", "Olasukanmi",
+                "090123456790", "sam@ola.com", "03-03-1890");
+        tecnoPhoneBook.createContact("Lamide", "Kelvin",
+                "09053010203", "lam@ir.com", "13-02-2009");
+        tecnoPhoneBook.createContact("Anjola", "Salsa",
+                "07065432108", "anj@kel.com", "12-01-1990");
+        assertEquals("jij", tecnoPhoneBook.displayContacts());
+    }
+    @Test
+    public void testThatContactsAreSorted(){
+        tecnoPhoneBook.createContact("Sam", "Immanuel", "09087456543",
+                "sam@im.com", "12-03-1989");
+        tecnoPhoneBook.createContact("Bola", "Ige",
+                "09034567893", "bola@ige.com", "12-03-1980");
+        tecnoPhoneBook.createContact("Jide", "Samson",
+                "0812345678", "jide@sam.com", "01-01-1970");
+        tecnoPhoneBook.createContact("Samuel", "Olasukanmi",
+                "090123456790", "sam@ola.com", "03-03-1890");
+        tecnoPhoneBook.createContact("Lamide", "Kelvin",
+                "09053010203", "lam@ir.com", "13-02-2009");
+        tecnoPhoneBook.createContact("Anjola", "Salsa",
+                "07065432108", "anj@kel.com", "12-01-1990");
+        tecnoPhoneBook.sortContactsFromListOfContacts();
+        assertEquals("jij", tecnoPhoneBook.displayContacts());
+    }
 }
