@@ -15,6 +15,7 @@ public class PhoneBook {
     public void createContact(String firstName, String lastName, String phoneNo, String mail, String bDay) {
         newContact = new Contacts(firstName, lastName, phoneNo, mail, bDay);
         contactList.add(newContact);
+        if(contactList != null) print("You have successfully created a contact");
     }
     public void removeContact(String firstName) {
         loopThroughContactListToRemove(firstName);

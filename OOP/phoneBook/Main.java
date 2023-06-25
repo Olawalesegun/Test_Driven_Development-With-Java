@@ -16,8 +16,8 @@ public class Main{
             Press 1 -> To Enter Your PhoneBook
             Press 2 -> To Exit this Option
       """);
-      int numberEntered = userInput.nextInt();
-      pickPhoneBookOptions(numberEntered);
+      ;
+      pickPhoneBookOptions(collectPromptToBeEntered());
   }
   public void pickPhoneBookOptions(int numberToPick){
       switch(numberToPick){
@@ -41,8 +41,8 @@ public class Main{
           Press 2 -> To Search Contact
           Press 3 -> To Remove Contact
       """);
-      int numba = userInput.nextInt();
-      switch(numba){
+    ;
+      switch(collectPromptToBeEntered()){
           case 1 -> createContact();
           case 2 -> searchContact();
           case 3 -> removeContact();
@@ -52,6 +52,16 @@ public class Main{
   public void createContact(){
       samsungPhoneBook.createContact(enterFirstName(),enterLastName(),
               enterPhoneNo(),enterEmail(),enterBday());
+      print("""
+              To go back to Main Menu
+              Press 1 -> To go to back to Previous Menu
+              Press 2 -> To exit
+              """);
+      int numba
+  }
+  public int collectPromptToBeEntered(){
+      int numba = userInput.nextInt();
+      return numba;
   }
   public void searchContact(){
       String firstName = enterFirstName();
