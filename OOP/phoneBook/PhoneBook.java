@@ -1,9 +1,6 @@
 package phoneBook;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PhoneBook {
 
@@ -45,10 +42,46 @@ public class PhoneBook {
         }
         return Arrays.toString(elementsInContact);
     }
-    public void updateElement(String firstName){
+    public void updateElement(){
+        print("""
+        What would you like to update?
+        --Press 1 -> To update First Name Only
+        --Press 2 -> To update Last Name Only
+        --Press 3 -> To update First Name & Last Name
+        """);
+
+        /*switch (takeInput()){
+            case 1 -> updateFirstNameOnly();
+            case 2 -> updateLastNameOnly();
+        }*/
+
+    }
+    public int takeInput(){
+        Scanner userInput = new Scanner(System.in);
+        int takeIt = userInput.nextInt();
+        return takeIt;
+    }
+    public String NameCollector(){
+        Scanner userInput = new Scanner(System.in);
+        String name = userInput.next();
+        return name;
+
+    }
+    public void updateFirstNameOnly(String firstName){
         for(Contacts con: contactList){
             if(con.getFirstName() != null){
-               newContact.updateFirstName(firstName);
+                newContact.updateFirstName(firstName);
+            }else{
+                print("You will have to create contact before you can update contact");
+            }
+        }
+    }
+    public void updateLastNameOnly(String lastName){
+        for(Contacts con: contactList){
+            if(con.getLastName() != null){
+                newContact.updateLastName(lastName);
+            }else{
+                print("You will have to create contact before you can update contact");
             }
         }
     }
