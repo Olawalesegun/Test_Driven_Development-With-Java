@@ -2,6 +2,8 @@ package phoneBook;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class PhoneBook {
 
@@ -15,12 +17,18 @@ public class PhoneBook {
         contactList.add(newContact);
     }
     public void removeContact(String firstName) {
+        loopThroughContactListToRemove(firstName);
+    }
+    public void loopThroughContactListToRemove(String firstName){
         for (Contacts cont : contactList) {
-            if (cont.getFirstName().equals(firstName)) {
-                contactList.remove(cont);
-            } else {
-                System.out.println(" ---- Name cannot be found -------");
-            }
+           checkIfConditionIsEqualToValueEntered(cont, firstName);
+        }
+    }
+    public void checkIfConditionIsEqualToValueEntered(Contacts cont, String firstName){
+        if (cont.getFirstName().equals(firstName)) {
+            contactList.remove(cont);
+        } else {
+            print(" ---- Name cannot be found -------");
         }
     }
     public String getFirstName() {
@@ -36,7 +44,7 @@ public class PhoneBook {
         }
         return Arrays.toString(elementsInContact);
     }
-    public String  printElementsOfPhoneBook(Contacts con){
+    public String printElementsOfPhoneBook(Contacts con){
         String elementsContainer = con.getFirstName() + " " +con.getLastName() + " " +
                 con.getPhoneNo() + " " + con.getEmail() + " " + con.getDate();
         //print(elementsContainer);
@@ -55,10 +63,24 @@ public class PhoneBook {
         for(Contacts contact: contactList){
             if(contact.getFirstName().equals(nameInContact)){
                 result = printElementsOfPhoneBook(contact);
+            }else{
+                print("Contact does not exist");
             }
         }
         return result;
     }
+    public void sortContactsFromListOfContacts() {
+        Collections.sort(contactList, new Comparator<Contacts>() {
+            @Override
+            public int compare(Contacts contact1, Contacts contact2) {
+                return contact1.getFirstName().compareTo(contact2.getFirstName());
+            }
+        });
+    }
+//    public void sortContactsFromListOfContacts() {
+//        Collections.sort(contactList, (contact1, contact2) ->
+//                contact1.getFirstName().compareTo(contact2.getFirstName()));
+//    }
 }
 
 
