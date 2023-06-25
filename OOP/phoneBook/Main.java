@@ -53,11 +53,15 @@ public class Main{
       samsungPhoneBook.createContact(enterFirstName(),enterLastName(),
               enterPhoneNo(),enterEmail(),enterBday());
       print("""
-              To go back to Main Menu
-              Press 1 -> To go to back to Previous Menu
-              Press 2 -> To exit
+              \n
+                To go back to Main Menu
+                Press 1 -> To go to back to Previous Menu
+                Press 2 -> To exit
               """);
-      int numba
+      switch(collectPromptToBeEntered()){
+          case 1 -> secondPhaseIntoThePhoneBook();
+          case 2 -> exitContact();
+      }
   }
   public int collectPromptToBeEntered(){
       int numba = userInput.nextInt();
