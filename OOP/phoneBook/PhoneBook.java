@@ -45,6 +45,13 @@ public class PhoneBook {
         }
         return Arrays.toString(elementsInContact);
     }
+    public void updateElement(String firstName){
+        for(Contacts con: contactList){
+            if(con.getFirstName() != null){
+               newContact.updateFirstName(firstName);
+            }
+        }
+    }
     public String printElementsOfPhoneBook(Contacts con){
         String elementsContainer = con.getFirstName() + " " +con.getLastName() + " " +
                 con.getPhoneNo() + " " + con.getEmail() + " " + con.getDate();
@@ -68,6 +75,7 @@ public class PhoneBook {
                 print("Contact does not exist");
             }
         }
+        print(result);
         return result;
     }
     public void sortContactsFromListOfContacts() {
