@@ -2,8 +2,8 @@ package numerals;
 
 public class HexaDecimal {
     private int hexNum1 = 0x64;
-    private int hexNum2 = 0x99;
-    private int hexNum3 = 0x899;
+    private int hexNum2 = 0x9B;
+    private int hexNum3 = 0x8A;
 
     public int getHexNum1() {
         return hexNum1;
