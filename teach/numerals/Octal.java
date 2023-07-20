@@ -20,16 +20,16 @@ public class Octal {
         return numeralNumber2;
     }
     public int getNumeralNumber3(){
-        return numeralNumber2;
+        return numeralNumber3;
     }
     public int getNumeralNumber4(){
-        return numeralNumber2;
+        return numeralNumber4;
     }
     public int getNumeralNumber5(){
-        return numeralNumber2;
+        return numeralNumber5;
     }
     public int getNumeralNumber6(){
-        return numeralNumber2;
+        return numeralNumber6;
     }
 
 
