@@ -42,31 +42,6 @@ public class PhoneBook {
         }
         return Arrays.toString(elementsInContact);
     }
-    public void updateElement(){
-        print("""
-        What would you like to update?
-        --Press 1 -> To update First Name Only
-        --Press 2 -> To update Last Name Only
-        --Press 3 -> To update First Name & Last Name
-        """);
-
-        /*switch (takeInput()){
-            case 1 -> updateFirstNameOnly();
-            case 2 -> updateLastNameOnly();
-        }*/
-
-    }
-    public int takeInput(){
-        Scanner userInput = new Scanner(System.in);
-        int takeIt = userInput.nextInt();
-        return takeIt;
-    }
-    public String NameCollector(){
-        Scanner userInput = new Scanner(System.in);
-        String name = userInput.next();
-        return name;
-
-    }
     public void updateFirstNameOnly(String firstName){
         for(Contacts con: contactList){
             if(con.getFirstName() != null){
@@ -84,6 +59,10 @@ public class PhoneBook {
                 print("You will have to create contact before you can update contact");
             }
         }
+    }
+    public void updateFirstNameAndLastName(String firstName, String lastName){
+        updateFirstNameOnly(firstName);
+        updateLastNameOnly(lastName);
     }
     public String printElementsOfPhoneBook(Contacts con){
         String elementsContainer = con.getFirstName() + " " +con.getLastName() + " " +
