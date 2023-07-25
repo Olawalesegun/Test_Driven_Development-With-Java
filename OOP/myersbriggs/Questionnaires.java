@@ -34,7 +34,6 @@ public class Questionnaires {
             collectAnswer(collectedInput(), questionNumber);
         }
     }
-
     public String collectedInput(){
         Scanner input = new Scanner(System.in);
         return input.nextLine();
