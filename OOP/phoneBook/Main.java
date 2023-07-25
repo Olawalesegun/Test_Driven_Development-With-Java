@@ -39,14 +39,18 @@ public class Main{
           You are now in your Phonebook.
           Press 1 -> To Create Contact
           Press 2 -> To Search Contact
-          Press 3 -> To Remove Contact
+          Press 3 -> To Update Contact
+          Press 4 -> To Remove Contact
+          Press 5 -> To 
+          Press 6 -> To exit
       """);
     ;
       switch(collectPromptToBeEntered()){
           case 1 -> createContact();
           case 2 -> searchContact();
-          case 3 -> removeContact();
-          case 4 -> exitContact();
+          case 3 -> updateContact();
+          case 4 -> removeContact();
+          case 5 -> exitContact();
       }
   }
   public void createContact(){
@@ -71,7 +75,39 @@ public class Main{
       String firstName = enterFirstName();
       samsungPhoneBook.searchContactFor(firstName);
   }
-  public void removeContact(){
+    public void updateContact(){
+        print("""
+        What would you like to update?
+        --Press 1 -> To update First Name Only
+        --Press 2 -> To update Last Name Only
+        --Press 3 -> To update First Name & Last Name
+        """);
+        switch (takeInput()){
+            case 1 -> updateFirstName(nameCollector());
+            case 2 -> updateLastName(nameCollector());
+            case 3 -> updateFirstAndLastName(nameCollector(), nameCollector());
+        }
+    }
+    public int takeInput(){
+        Scanner userInput = new Scanner(System.in);
+        int takeIt = userInput.nextInt();
+        return takeIt;
+    }
+    public String nameCollector(){
+        Scanner userInput = new Scanner(System.in);
+        String name = userInput.next();
+        return name;
+    }
+    public void updateFirstName(String firstName){
+      samsungPhoneBook.updateFirstNameOnly(firstName);
+    }
+    public void updateLastName(String lastName){
+      samsungPhoneBook.updateLastNameOnly(lastName);
+    }
+    public void updateFirstAndLastName(String firstName, String lastName){
+      samsungPhoneBook.updateFirstNameAndLastName(firstName, lastName);
+    }
+    public void removeContact(){
       String firstName = enterFirstName();
       samsungPhoneBook.removeContact(firstName);
   }
