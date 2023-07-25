@@ -32,7 +32,6 @@ public class User extends MBTI{
 
         }
     }
-
     private void responseCollation() {
         int count = 0;
         while (count < getQuestions().length) {
