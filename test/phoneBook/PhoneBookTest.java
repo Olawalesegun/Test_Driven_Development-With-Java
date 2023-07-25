@@ -121,6 +121,17 @@ class PhoneBookTest {
         tecnoPhoneBook.createContact("Anjola", "Salsa",
                 "07065432108", "anj@kel.com", "12-01-1990");
         tecnoPhoneBook.sortContactsFromListOfContacts();
-        assertEquals("jij", tecnoPhoneBook.displayContacts());
+        String result = "[Anjola Salsa 07065432108 anj@kel.com 12-01-1990, Bola Ige 09034567893 bola@ige.com 12-03-1980," +
+                " Jide Samson 0812345678 jide@sam.com 01-01-1970, Lamide Kelvin 09053010203 lam@ir.com 13-02-2009, " +
+                "Sam Immanuel 09087456543 sam@im.com 12-03-1989,Samuel, Olasukanmi, "+
+                "090123456790, sam@ola.com, 03-03-1890]";
+        assertEquals(result, tecnoPhoneBook.displayContacts());
+    }
+    @Test
+    public void testThatContactCanBeUpdated(){
+        tecnoPhoneBook.createContact("Sam", "Immanuel", "09087456543",
+                "sam@im.com", "12-03-1989");
+        tecnoPhoneBook.updateFirstNameOnly("Shola");
+        assertEquals("Shola", tecnoPhoneBook.displayContacts());
     }
 }
