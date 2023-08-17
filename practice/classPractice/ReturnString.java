@@ -31,14 +31,14 @@ public class ReturnString {
 
     public void checkTheMostFrequentCharacter(String input){
         int counter= 0;
-        char [] highest = new char[input.length()];
+       /* char [] highest = new char[input.length()];
         for(int index = 0; index<input.length(); index++){
-            char charToCheck = char.valueOf(input.charAt(index));
+            String charToCheck = char.valueOf(input.charAt(index));
             for(int index2 = index + 1; index<input.length() -1; index++){
                 if(charToCheck.equals(input.charAt(index2))){
                     highest[index] = charToCheck;
                 }
-            }
+            }*/
         }
 
 
@@ -58,6 +58,6 @@ public class ReturnString {
         return rep;*/
         //System.out.println(stringCollected);
         //return new String(stringCollected);
-    }
+    //}
 
 //}
