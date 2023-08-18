@@ -1,6 +1,6 @@
 import java.nio.file.Path;
 
-public class fileIoNormalizer {
+public class FileIoNormalizer {
 
     public static void main(String[] args) {
         String location2 = "/a/b/c/../d/e";
