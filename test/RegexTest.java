@@ -27,4 +27,10 @@ class RegexTest {
         boolean result = Regex.findMatch(text, pattern);
         assertTrue(result);
     }
+    @Test
+    public void testValidatePhoneNumber(){
+        String phoneNumber = "=234-7035250404";
+        boolean result = Regex.validatePhoneNumber((phoneNumber));
+        assertTrue(result);
+    }
 }
