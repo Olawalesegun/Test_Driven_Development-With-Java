@@ -1,4 +1,5 @@
 package enums;
 
-public class HealthProblem {
+public enum HealthProblem {
+    CANCER, MENTAL_HEALTH_DISORDERS, AUTOIMMUNE_DISEASE
 }
