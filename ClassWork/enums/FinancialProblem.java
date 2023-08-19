@@ -1,4 +1,5 @@
 package enums;
 
-public class FinancialProblem {
+public enum FinancialProblem {
+    UNEMPLOYMENT, UNDEREMPLOYMENT, INSUFFICIENT_SAVINGS
 }
