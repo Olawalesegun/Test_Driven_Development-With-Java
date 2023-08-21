@@ -1,2 +1,4 @@
-package producerAndConsumer;public class TheBridge {
+package producerAndConsumer;
+
+public class TheBridge {
 }
