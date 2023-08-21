@@ -1,2 +1,4 @@
-package producerAndConsumer;public class Producer {
+package producerAndConsumer;
+
+public class Producer {
 }
