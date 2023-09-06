@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public enum Problems {
+public enum Problems {
+
+    NAME,
+    TYPE,
+    SOLVED;
+
 }
