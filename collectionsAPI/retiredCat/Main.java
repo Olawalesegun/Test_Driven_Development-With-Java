@@ -1,3 +1,4 @@
+/*
 package retiredCat;
 
 import comparism.Cat;
@@ -27,3 +28,4 @@ public class Main {
         System.out.println(catss); //[Bruno, Pauly, Shigo Baba]
     }
 }
+*/
