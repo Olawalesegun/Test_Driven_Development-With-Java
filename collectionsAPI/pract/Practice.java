@@ -68,7 +68,26 @@ public class Practice {
         pq.add(15);
         pq.add(3);
         pq.forEach(System.out::println);
-        System.out.println(pq);
+        System.out.println("rEad Priority queue " + pq);
+
+        PriorityQueue pqk = new PriorityQueue();
+
+        pqk.add(20);
+        pqk.add(45);
+        pqk.add(47);
+        pqk.add(49);
+        pqk.add(15);
+        pqk.add(18);
+        pqk.add(20);
+
+        System.out.println(pqk);
+
+        Thread ma = new Thread();
+        Thread ma2 = new Thread();
+        
+
+        ma.setPriority(1);
+        ma2.setPriority(2);
 
     }
 }
