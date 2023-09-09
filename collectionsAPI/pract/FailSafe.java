@@ -2,7 +2,7 @@ package pract;
 
 import java.util.ArrayList;
 
-public class FallSafe {
+public class FailSafe {
 
     public static void main(String[] args) {
 
