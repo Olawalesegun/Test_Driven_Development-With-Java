@@ -1,5 +1,6 @@
 package pract.hash;
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.TreeMap;
@@ -11,8 +12,16 @@ public class HashMapp {
         hashMap.put(2,24);
         hashMap.put(1, 22);
         hashMap.put("null", 56);
+        hashMap.put("bella", 47);
+
+        hashMap.remove("null");
+
+        Collections.synchronizedMap(hashMap);
+
+        System.out.println("Synchronized hashmap: " + hashMap);
 
         System.out.println(hashMap);
+        System.out.println("Get bella value: " + hashMap.get("bella"));
 
         LinkedHashMap linkedHashMap = new LinkedHashMap();
         linkedHashMap.put(2, 24);
