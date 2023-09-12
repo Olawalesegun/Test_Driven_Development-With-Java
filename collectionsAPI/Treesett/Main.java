@@ -23,6 +23,7 @@ public class Main {
         System.out.println("Before collecting in a sorted set" + numbers.headSet(7));
 
         SortedSet<Integer> set = numbers.headSet(40); // [10]
+        System.out.println(numbers.headSet(40));
         System.out.println(set);
     }
 }
